@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="b387eb97-c6f0-488f-9a9c-84bce819f2c3" Scope="Site" Title="CMICT.CSP.Async Feature1">
+  <ElementManifests>
+    <ElementManifest Location="RegisterAdd\Elements.xml" />
+    <ElementFile Location="RegisterAdd\RegisterAdd.webpart" />
+    <ElementManifest Location="RegistServiceList\Elements.xml" />
+    <ElementFile Location="RegistServiceList\RegistServiceList.webpart" />
+    <ElementManifest Location="GlobalData\Elements.xml" />
+    <ElementFile Location="GlobalData\GlobalData.webpart" />
+    <ElementManifest Location="DangerCTNReport\Elements.xml" />
+    <ElementFile Location="DangerCTNReport\DangerCTNReport.webpart" />
+    <ElementManifest Location="DangerPicManage\Elements.xml" />
+    <ElementFile Location="DangerPicManage\DangerPicManage.webpart" />
+    <ElementManifest Location="CIQchouxiang\Elements.xml" />
+    <ElementFile Location="CIQchouxiang\CIQchouxiang.webpart" />
+  </ElementManifests>
+</Feature>

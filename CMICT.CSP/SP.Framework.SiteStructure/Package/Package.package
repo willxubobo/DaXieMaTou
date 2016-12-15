@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6b68e042-dc37-4d41-963e-afba47ad6a4f" solutionId="6b68e042-dc37-4d41-963e-afba47ad6a4f" resetWebServer="false" sharePointProductVersion="15.0" name="SP.Framework.SiteStructure" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="SP.Framework.Common.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\SP.Framework.Common\SP.Framework.Common.csproj" />
+    <projectOutputAssembly location="SP.Framework.DAL.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\SP.Framework.DAL\SP.Framework.DAL.csproj" />
+    <projectOutputAssembly location="NET.Framework.Common.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\NET.Framework.Common\NET.Framework.Common.csproj" />
+    <customAssembly location="Camlex.NET.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="ISAPI\Camlex.NET.dll" />
+    <customAssembly location="EPPlus.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="ISAPI\EPPlus.dll" />
+    <customAssembly location="Newtonsoft.Json.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="ISAPI\Newtonsoft.Json.dll" />
+    <customAssembly location="NPOI.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="ISAPI\NPOI.dll" />
+    <customAssembly location="Enyim.Caching.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="ISAPI\Enyim.Caching.dll" />
+    <customAssembly location="log4net.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="ISAPI\log4net.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="9eec9707-236b-497a-a806-c8ebf4574e5e" />
+    <featureReference itemId="f1fdcfa7-6c70-42a6-bc98-0baa706fbc36" />
+    <featureReference itemId="669b66c5-9814-4858-b745-969d714efd58" />
+    <featureReference itemId="baa04136-4485-487a-934d-f8e33d1140b2" />
+    <featureReference itemId="34e029f7-ba73-4c50-a341-ad26669daffa" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="0e66699d-57a3-479b-b728-182ef47d0ba3" />
+  </projectItems>
+</package>

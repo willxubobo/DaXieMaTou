@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A25092E-2517-4657-A0B3-25265226D2F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMICT.CSP.Web</RootNamespace>
+    <AssemblyName>CMICT.CSP.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <TokenReplacementFileExtensions>ashx</TokenReplacementFileExtensions>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <TokenReplacementFileExtensions>ashx</TokenReplacementFileExtensions>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <TokenReplacementFileExtensions>ashx</TokenReplacementFileExtensions>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TokenReplacementFileExtensions>ashx</TokenReplacementFileExtensions>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.4.5.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ISAPI\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseWebPart.cs" />
+    <Compile Include="BusinessOnLine\BoxInfoTransfer\BoxInfoTransfer.ascx.cs">
+      <DependentUpon>BoxInfoTransfer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessOnLine\BoxInfoTransfer\BoxInfoTransfer.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BoxInfoTransfer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessOnLine\InspectionBooking\InspectionBooking.ascx.cs">
+      <DependentUpon>InspectionBooking.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessOnLine\InspectionBooking\InspectionBooking.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InspectionBooking.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessOnLine\InspectionSearch\InspectionSearch.ascx.cs">
+      <DependentUpon>InspectionSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessOnLine\InspectionSearch\InspectionSearch.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InspectionSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessSearch\BusinessSearch\BusinessSearch.ascx.cs">
+      <DependentUpon>BusinessSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessSearch\BusinessSearch\BusinessSearch.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BusinessSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessSearch\DataSourceManage\DataSourceManage.ascx.cs">
+      <DependentUpon>DataSourceManage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessSearch\DataSourceManage\DataSourceManage.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSourceManage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessSearch\PagesEventReceiver\PagesEventReceiver.cs" />
+    <Compile Include="BusinessSearch\TemplateConfigEditorPart.cs" />
+    <Compile Include="BusinessSearch\TemplateManage\TemplateManage.ascx.cs">
+      <DependentUpon>TemplateManage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessSearch\TemplateManage\TemplateManage.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TemplateManage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryEvents\LookupTypesEvent.cs" />
+    <Compile Include="CategoryEvents\LookupValuesEvent.cs" />
+    <Compile Include="ChangeUserPwd\ChangePassword\ChangePassword.ascx.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeUserPwd\ChangePassword\ChangePassword.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeMapping\CodeMapping\CodeMapping.ascx.cs">
+      <DependentUpon>CodeMapping.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CodeMapping\CodeMapping\CodeMapping.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CodeMapping.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerErrorHandel.cs" />
+    <Compile Include="CustomerError\CustomerError\CustomerError.ascx.cs">
+      <DependentUpon>CustomerError.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerError\CustomerError\CustomerError.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerError.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CMICT.CategoryEventReceiver\CMICT.EventReceiver.cs">
+      <DependentUpon>CMICT.CategoryEventReceiver.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CMICT.WarmUpTimerJob\CMICT.EventReceiver.cs">
+      <DependentUpon>CMICT.WarmUpTimerJob.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CMICT.WebConfig\CMICT.EventReceiver.cs">
+      <DependentUpon>CMICT.WebConfig.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\CMICT.CSP.Web\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\CMICT.CSP.Web\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\CMICT.CSP.Web\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\CMICT.CSP.Web\ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\CMICTRedirectPage.aspx.cs">
+      <DependentUpon>CMICTRedirectPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\CMICTRedirectPage.aspx.designer.cs">
+      <DependentUpon>CMICTRedirectPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\CMICT.CSP.Web\TemplateConfigHandler\TemplatePageCheck.ashx.cs">
+      <DependentUpon>TemplatePageCheck.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RightsManagement\ManageRights\ManageRights.ascx.cs">
+      <DependentUpon>ManageRights.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="RightsManagement\ManageRights\ManageRights.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageRights.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BusinessOnlineServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CBOSServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\CommunicationConfig\CommunicationConfig.ascx.cs">
+      <DependentUpon>CommunicationConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\CommunicationConfig\CommunicationConfig.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommunicationConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\ConnectionConfig\ConnectionConfig.ascx.cs">
+      <DependentUpon>ConnectionConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\ConnectionConfig\ConnectionConfig.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConnectionConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\DataSourceConfig\DataSourceConfig.ascx.cs">
+      <DependentUpon>DataSourceConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\DataSourceConfig\DataSourceConfig.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSourceConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\DisplayConfig\DisplayConfig.ascx.cs">
+      <DependentUpon>DisplayConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\DisplayConfig\DisplayConfig.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DisplayConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\Preview\Preview.ascx.cs">
+      <DependentUpon>Preview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\Preview\Preview.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Preview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\QueryConfig\QueryConfig.ascx.cs">
+      <DependentUpon>QueryConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\QueryConfig\QueryConfig.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QueryConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\TemplateInfoConfig\TemplateInfoConfig.ascx.cs">
+      <DependentUpon>TemplateInfoConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateConfig\TemplateInfoConfig\TemplateInfoConfig.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TemplateInfoConfig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUseAge\TestUseAgeWebPart\TestUseAgeWebPart.ascx.cs">
+      <DependentUpon>TestUseAgeWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUseAge\TestUseAgeWebPart\TestUseAgeWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestUseAgeWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TestWebPart\TestWebPart.ascx.cs">
+      <DependentUpon>TestWebPart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TestWebPart\TestWebPart.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestWebPart.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BusinessOnlineSitePages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b89e6164-26dc-4c03-8f3b-ec30a0b80e3c}</SharePointProjectItemId>
+    </None>
+    <None Include="BusinessOnLine\BoxInfoTransfer\BoxInfoTransfer.webpart" />
+    <None Include="BusinessOnLine\BoxInfoTransfer\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7eb003ad-8e64-49c3-ac29-4092fff763b1}</SharePointProjectItemId>
+    </None>
+    <None Include="BusinessOnLine\InspectionBooking\InspectionBooking.webpart" />
+    <None Include="BusinessOnLine\InspectionBooking\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{36affea6-8fe8-4bc7-8878-fae5b56bffe2}</SharePointProjectItemId>
+    </None>
+    <None Include="BusinessOnLine\InspectionSearch\InspectionSearch.webpart" />
+    <None Include="BusinessOnLine\InspectionSearch\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9bab17e2-6612-4569-9283-fa4d80528a8a}</SharePointProjectItemId>
+    </None>
+    <None Include="BusinessSearch\BusinessSearch\BusinessSearch.webpart" />
+    <None Include="BusinessSearch\BusinessSearch\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8e74dcd6-5d70-49f3-893c-10a4badd49d1}</SharePointProjectItemId>
+    </None>
+    <None Include="BusinessSearch\DataSourceManage\DataSourceManage.webpart" />
+    <None Include="BusinessSearch\DataSourceManage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2c49b2bd-7420-40bb-9f9e-6e14035bf2dc}</SharePointProjectItemId>
+    </None>
+    <None Include="BusinessSearch\PagesEventReceiver\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2e783d76-fb8d-4723-9e45-28c03dbc4c14}</SharePointProjectItemId>
+    </None>
+    <None Include="BusinessSearch\TemplateManage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{804f1e83-7388-4ce7-a326-b3ec4e113d9b}</SharePointProjectItemId>
+    </None>
+    <None Include="BusinessSearch\TemplateManage\TemplateManage.webpart" />
+    <None Include="ChangeUserPwd\ChangePassword\ChangePassword.webpart" />
+    <None Include="ChangeUserPwd\ChangePassword\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{774d927b-5099-4c07-bc2f-5bb4762c4fac}</SharePointProjectItemId>
+    </None>
+    <None Include="CodeMapping\CodeMapping\CodeMapping.webpart" />
+    <None Include="CodeMapping\CodeMapping\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{832c3b67-f08b-4b3a-9074-75c4103aead6}</SharePointProjectItemId>
+    </None>
+    <None Include="CONFIG\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ad676411-be46-4f4d-986e-16f72e0154f6}</SharePointProjectItemId>
+    </None>
+    <None Include="CustomerError\CustomerError\CustomerError.webpart" />
+    <None Include="CustomerError\CustomerError\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5094edd8-b0a4-4e2f-96c0-14e445251343}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\CMICT.TemplateConfig.WebPart\CMICT.TemplateConfig.WebPart.feature">
+      <FeatureId>{36932695-d420-411c-8f98-628c50e9adae}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.BusinessSearch.WebPart\CMICT.BusinessSearch.WebPart.feature">
+      <FeatureId>{a1b11998-717a-438d-b056-2b61f60b2bc6}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.BusinessOnLine.WebPart\CMICT.BusinessOnLine.WebPart.feature">
+      <FeatureId>{390a8e38-c21b-4419-be19-fe3bf7946a23}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.RightOrganazition.WebPart\CMICT.RightOrganazition.WebPart.feature">
+      <FeatureId>{c53083ae-79ce-416a-87c3-f5b599c7f0fb}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.PagesLibrary.EventReceiver\CMICT.PagesLibrary.EventReceiver.feature">
+      <FeatureId>{7e745b2f-349e-4f79-9687-8e5a80d9388d}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.WebConfig\CMICT.WebConfig.feature">
+      <FeatureId>{056047a9-e3ac-4541-966f-919bd4c1ea27}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.CodeMapping.WebPart\CMICT.CodeMapping.WebPart.feature">
+      <FeatureId>{4f9a1e97-744a-4efc-9070-0a728c5a337e}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.CSP.SitePages\CMICT.CSP.SitePages.feature">
+      <FeatureId>{65a3c645-9296-4c28-bb78-d4024158e538}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.ChangePassword.WebPart\CMICT.ChangePassword.WebPart.feature">
+      <FeatureId>{35093bb0-7395-46be-b6fd-2fea42a20eb5}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.CSP.BusinessOnlineSitePages\CMICT.CSP.BusinessOnlineSitePages.feature">
+      <FeatureId>{9930382a-e1c6-4c58-a8f5-3632e43846cc}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.CustomerError.WebPart\CMICT.CustomerError.WebPart.feature">
+      <FeatureId>{4130f57f-a904-4edb-86fc-464064a722cd}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.CSP.RootWebPages\CMICT.CSP.RootWebPages.feature">
+      <FeatureId>{868639de-df3a-46e6-8232-bd9a62071206}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.WarmUpTimerJob\CMICT.WarmUpTimerJob.feature">
+      <FeatureId>{bfb7c77a-d075-46ea-a279-7a7a69046d85}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.CategoryEventReceiver\CMICT.CategoryEventReceiver.feature">
+      <FeatureId>{a1d064cb-4bab-4a11-8b55-3dcfbafbceea}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\CMICT.CSP.Web\TemplateConfigHandler\TemplatePageCheck.ashx" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4357d8b8-c98f-4b48-ab58-5e7fba49164c}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{445cb196-bff6-4f23-8f79-e8156cfb7826}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="RightsManagement\ManageRights\ManageRights.webpart" />
+    <None Include="RightsManagement\ManageRights\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fdbeed32-2c69-4890-804f-ba7158f4ed94}</SharePointProjectItemId>
+    </None>
+    <None Include="RootWebPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6e8fbca7-dd1f-4d81-a846-3e5cd4b98a63}</SharePointProjectItemId>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.callNPP4EDIResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.checkUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.costcoAddResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.costcoContainerSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.costcoOutGateSearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.getBookTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.queryCtnnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.reserveContainersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.reserveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.submitCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.TOS04Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\CMICT.CSP.Web.BusinessOnlineServices.TosSubmitCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BusinessOnlineServices\QGCostco.wsdl" />
+    <None Include="Service References\CBOSServices\CMICT.CSP.Web.CBOSServices.ArrayOf_xsd_string.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBOSServices\CMICT.CSP.Web.CBOSServices.CodSwicthTable.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBOSServices\CMICT.CSP.Web.CBOSServices.getCodSwitchMessage2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBOSServices\CMICT.CSP.Web.CBOSServices.getCodSwitchMessageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CBOSServices\CodSwicthTableService.wsdl" />
+    <None Include="SitePages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8594bfdf-acc3-47cf-97e8-10de59fd5e0b}</SharePointProjectItemId>
+    </None>
+    <None Include="TemplateConfig\CommunicationConfig\CommunicationConfig.webpart" />
+    <None Include="TemplateConfig\CommunicationConfig\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{05ee1dee-e19c-404d-95d9-3d791d6b69e1}</SharePointProjectItemId>
+    </None>
+    <None Include="TemplateConfig\ConnectionConfig\ConnectionConfig.webpart" />
+    <None Include="TemplateConfig\ConnectionConfig\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{799976dc-de59-4bba-942f-7d5261ae6498}</SharePointProjectItemId>
+    </None>
+    <None Include="TemplateConfig\DataSourceConfig\DataSourceConfig.webpart" />
+    <None Include="TemplateConfig\DataSourceConfig\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d2b87811-f4ba-4110-89d4-ba7a0d70abcf}</SharePointProjectItemId>
+    </None>
+    <None Include="TemplateConfig\DisplayConfig\DisplayConfig.webpart" />
+    <None Include="TemplateConfig\DisplayConfig\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{80512102-e6d5-4398-b9ed-03e41bf71d4a}</SharePointProjectItemId>
+    </None>
+    <None Include="TemplateConfig\Preview\Preview.webpart" />
+    <None Include="TemplateConfig\Preview\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{36796e46-1406-484f-8123-4210528635c6}</SharePointProjectItemId>
+    </None>
+    <None Include="TemplateConfig\QueryConfig\QueryConfig.webpart" />
+    <None Include="TemplateConfig\QueryConfig\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a0fbe915-9940-474a-9f8f-52437f42bb0d}</SharePointProjectItemId>
+    </None>
+    <None Include="TemplateConfig\TemplateInfoConfig\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{773e3f97-dda3-452a-ac65-161f8fdcabdd}</SharePointProjectItemId>
+    </None>
+    <None Include="TemplateConfig\TemplateInfoConfig\TemplateInfoConfig.webpart" />
+    <None Include="TestUseAge\TestUseAgeWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{20248eed-b43d-41e5-aade-1f25612b5810}</SharePointProjectItemId>
+    </None>
+    <None Include="TestUseAge\TestUseAgeWebPart\TestUseAgeWebPart.webpart" />
+    <None Include="TestWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8add331c-0418-40a3-aded-f15dd49427fc}</SharePointProjectItemId>
+    </None>
+    <None Include="TestWebPart\TestWebPart.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMICT.CSP.BLL\CMICT.CSP.BLL.csproj">
+      <Project>{25a5825c-030e-4adc-bf6c-92cecf165286}</Project>
+      <Name>CMICT.CSP.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMICT.CSP.Model\CMICT.CSP.Model.csproj">
+      <Project>{f00fe832-6087-4144-ab92-f6ee4ee9e1e8}</Project>
+      <Name>CMICT.CSP.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NET.Framework.Common\NET.Framework.Common.csproj">
+      <Project>{9ee64ba8-7b5f-42b2-b551-370945f8b261}</Project>
+      <Name>NET.Framework.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BusinessOnlineSitePages\BusinessOnline\BoxInforTransfer.aspx" />
+    <Content Include="BusinessOnlineSitePages\BusinessOnline\InspectionBooking.aspx" />
+    <Content Include="BusinessOnlineSitePages\BusinessOnline\InspectionSearch.aspx" />
+    <Content Include="BusinessOnlineSitePages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="BusinessOnLine\BoxInfoTransfer\BoxInfoTransfer.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>BoxInfoTransfer.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="BusinessOnLine\BoxInfoTransfer\Elements.xml" />
+    <Content Include="BusinessOnLine\InspectionBooking\Elements.xml" />
+    <Content Include="BusinessOnLine\InspectionBooking\InspectionBooking.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>InspectionBooking.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="BusinessOnLine\InspectionSearch\Elements.xml" />
+    <Content Include="BusinessOnLine\InspectionSearch\InspectionSearch.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>InspectionSearch.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="BusinessSearch\BusinessSearch\BusinessSearch.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>BusinessSearch.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="BusinessSearch\BusinessSearch\Elements.xml" />
+    <Content Include="BusinessSearch\DataSourceManage\DataSourceManage.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>DataSourceManage.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="BusinessSearch\DataSourceManage\Elements.xml" />
+    <Content Include="BusinessSearch\PagesEventReceiver\Elements.xml" />
+    <Content Include="BusinessSearch\TemplateManage\Elements.xml" />
+    <Content Include="BusinessSearch\TemplateManage\TemplateManage.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>TemplateManage.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="ChangeUserPwd\ChangePassword\ChangePassword.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>ChangePassword.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="ChangeUserPwd\ChangePassword\Elements.xml" />
+    <Content Include="CodeMapping\CodeMapping\CodeMapping.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>CodeMapping.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="CodeMapping\CodeMapping\Elements.xml" />
+    <Content Include="CONFIG\webconfig.CMICT.xml" />
+    <Content Include="CustomerError\CustomerError\CustomerError.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>CustomerError.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="CustomerError\CustomerError\Elements.xml" />
+    <Content Include="Features\CMICT.RightOrganazition.WebPart\CMICT.RightOrganazition.WebPart.Template.xml">
+      <DependentUpon>CMICT.RightOrganazition.WebPart.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.PagesLibrary.EventReceiver\CMICT.PagesLibrary.EventReceiver.Template.xml">
+      <DependentUpon>CMICT.PagesLibrary.EventReceiver.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.WebConfig\CMICT.WebConfig.Template.xml">
+      <DependentUpon>CMICT.WebConfig.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.CodeMapping.WebPart\CMICT.CodeMapping.WebPart.Template.xml">
+      <DependentUpon>CMICT.CodeMapping.WebPart.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.CSP.SitePages\CMICT.CSP.SitePages.Template.xml">
+      <DependentUpon>CMICT.CSP.SitePages.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.ChangePassword.WebPart\CMICT.ChangePassword.WebPart.Template.xml">
+      <DependentUpon>CMICT.ChangePassword.WebPart.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.CSP.BusinessOnlineSitePages\CMICT.CSP.BusinessOnlineSitePages.Template.xml">
+      <DependentUpon>CMICT.CSP.BusinessOnlineSitePages.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.CustomerError.WebPart\CMICT.CustomerError.WebPart.Template.xml">
+      <DependentUpon>CMICT.CustomerError.WebPart.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.CSP.RootWebPages\CMICT.CSP.RootWebPages.Template.xml">
+      <DependentUpon>CMICT.CSP.RootWebPages.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.WarmUpTimerJob\CMICT.WarmUpTimerJob.Template.xml">
+      <DependentUpon>CMICT.WarmUpTimerJob.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.CategoryEventReceiver\CMICT.CategoryEventReceiver.Template.xml">
+      <DependentUpon>CMICT.CategoryEventReceiver.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\CMICT.CSP.Web\ChangePassword.aspx" />
+    <Content Include="Layouts\CMICT.CSP.Web\CheckFormMsg.html" />
+    <Content Include="Features\CMICT.TemplateConfig.WebPart\CMICT.TemplateConfig.WebPart.Template.xml">
+      <DependentUpon>CMICT.TemplateConfig.WebPart.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.BusinessSearch.WebPart\CMICT.BusinessSearch.WebPart.Template.xml">
+      <DependentUpon>CMICT.BusinessSearch.WebPart.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.BusinessOnLine.WebPart\CMICT.BusinessOnLine.WebPart.Template.xml">
+      <DependentUpon>CMICT.BusinessOnLine.WebPart.feature</DependentUpon>
+    </Content>
+    <Content Include="ISAPI\AspNetPager.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ISAPI\AspNetPager.xml" />
+    <Content Include="Layouts\CMICT.CSP.Web\ErrorPage.aspx" />
+    <Content Include="Layouts\CMICTRedirectPage.aspx" />
+    <Content Include="Layouts\RedirectPage.aspx" />
+    <Content Include="RightsManagement\ManageRights\Elements.xml" />
+    <Content Include="RightsManagement\ManageRights\ManageRights.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>ManageRights.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="RootWebPages\ChangePassword\ChangePassword.aspx" />
+    <Content Include="RootWebPages\Elements.xml" />
+    <Content Include="RootWebPages\ErrorPage\ErrorPage.aspx" />
+    <None Include="Service References\CBOSServices\configuration91.svcinfo" />
+    <None Include="Service References\CBOSServices\configuration.svcinfo" />
+    <None Include="Service References\CBOSServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SitePages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="SitePages\SysManagement\AuthorizationManagement.aspx" />
+    <Content Include="SitePages\SysManagement\CodeMappingManagement.aspx" />
+    <Content Include="SitePages\TemplateManagement\CommunicationConfig.aspx" />
+    <Content Include="SitePages\TemplateManagement\ConnectionConfig.aspx" />
+    <Content Include="SitePages\TemplateManagement\DataSourceConfig.aspx" />
+    <Content Include="SitePages\TemplateManagement\DataSourceManage.aspx" />
+    <Content Include="SitePages\TemplateManagement\DisplayConfig.aspx" />
+    <Content Include="SitePages\TemplateManagement\Preview.aspx" />
+    <Content Include="SitePages\TemplateManagement\QueryConfig.aspx" />
+    <Content Include="SitePages\TemplateManagement\TemplateInfoConfig.aspx" />
+    <Content Include="SitePages\TemplateManagement\TemplateManagement.aspx" />
+    <Content Include="TemplateConfig\CommunicationConfig\CommunicationConfig.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>CommunicationConfig.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="TemplateConfig\CommunicationConfig\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TemplateConfig\DisplayConfig\DisplayConfig.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>DisplayConfig.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="TemplateConfig\DisplayConfig\Elements.xml" />
+    <Content Include="TemplateConfig\Preview\Elements.xml" />
+    <Content Include="TemplateConfig\Preview\Preview.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Preview.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="TestUseAge\TestUseAgeWebPart\Elements.xml" />
+    <Content Include="TestUseAge\TestUseAgeWebPart\TestUseAgeWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>TestUseAgeWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="TestWebPart\Elements.xml" />
+    <Content Include="TestWebPart\TestWebPart.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>TestWebPart.ascx.g.cs</LastGenOutput>
+    </Content>
+    <None Include="Service References\BusinessOnlineServices\QGCostco.disco" />
+    <None Include="Service References\BusinessOnlineServices\configuration91.svcinfo" />
+    <None Include="Service References\BusinessOnlineServices\configuration.svcinfo" />
+    <None Include="Service References\BusinessOnlineServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="TemplateConfig\ConnectionConfig\ConnectionConfig.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>ConnectionConfig.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="TemplateConfig\ConnectionConfig\Elements.xml" />
+    <Content Include="TemplateConfig\DataSourceConfig\DataSourceConfig.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>DataSourceConfig.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="TemplateConfig\DataSourceConfig\Elements.xml" />
+    <Content Include="TemplateConfig\QueryConfig\Elements.xml" />
+    <Content Include="TemplateConfig\QueryConfig\QueryConfig.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>QueryConfig.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="TemplateConfig\TemplateInfoConfig\Elements.xml" />
+    <Content Include="TemplateConfig\TemplateInfoConfig\TemplateInfoConfig.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>TemplateInfoConfig.ascx.g.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BusinessOnlineServices\" />
+    <WCFMetadataStorage Include="Service References\CBOSServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Layouts\CMICT.CSP.Web\BoxInfoTransferFolder\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

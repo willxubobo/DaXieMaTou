@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost
+    CodeBehind="CMICTService.cs"
+    Debug="true" Language="C#"
+    Service="CMICT.CSP.WCF.CMICTService, CMICT.CSP.WCF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=15611a72c64ea06c" %>

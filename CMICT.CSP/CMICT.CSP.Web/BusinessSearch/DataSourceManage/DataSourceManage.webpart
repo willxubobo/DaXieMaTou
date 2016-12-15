@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="CMICT.CSP.Web.BusinessSearch.DataSourceManage.DataSourceManage, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">DataSourceManage</property>
+        <property name="Description" type="string">数据源管理</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

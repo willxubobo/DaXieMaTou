@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D79C559-9F0B-477E-B5CF-172F623C4373}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMICT.CSP.Branding</RootNamespace>
+    <AssemblyName>CMICT.CSP.Branding</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebParts\BreadCrumbNav\BreadCrumbNav.ascx.cs">
+      <DependentUpon>BreadCrumbNav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\BreadCrumbNav\BreadCrumbNav.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BreadCrumbNav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ImageRender\ImageRender.ascx.cs">
+      <DependentUpon>ImageRender.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\ImageRender\ImageRender.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageRender.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\MainNavigation\MainNavigation.ascx.cs">
+      <DependentUpon>MainNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\MainNavigation\MainNavigation.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\SubSiteNavigation\SubSiteNavigation.ascx.cs">
+      <DependentUpon>SubSiteNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\SubSiteNavigation\SubSiteNavigation.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubSiteNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\TopNavigation\TopNavigation.ascx.cs">
+      <DependentUpon>TopNavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\TopNavigation\TopNavigation.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TopNavigation.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\GlobalWebPart\GlobalWebPart.feature">
+      <FeatureId>{fc319010-7dbc-44e8-b97e-57047a9747a6}</FeatureId>
+    </None>
+    <None Include="Features\NavigationImg\NavigationImg.feature">
+      <FeatureId>{767570af-8ac7-4eb5-abc5-132e370f5f28}</FeatureId>
+    </None>
+    <None Include="Features\LayoutPages\LayoutPages.feature">
+      <FeatureId>{dff5ea63-603d-4022-873f-29a7df58b704}</FeatureId>
+    </None>
+    <None Include="Features\MasterPages\MasterPages.feature">
+      <FeatureId>{6f682d51-e0cb-410b-93d7-bf4c4ffabfe4}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="LayoutPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7c634887-adbd-4efc-bf15-fc607852edf0}</SharePointProjectItemId>
+    </None>
+    <None Include="Layouts\CMICT.CSP.Branding\jqcool.net-DropKick\css\blank_theme.scss" />
+    <None Include="Layouts\CMICT.CSP.Branding\jqcool.net-DropKick\css\dropkick.scss" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1fa806c3-8be1-452d-9549-8aac93b1d072}</SharePointProjectItemId>
+    </None>
+    <None Include="MasterPages\Grey.master" />
+    <None Include="MasterPages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{132b6ba5-f274-4f44-9543-65487dbddc6f}</SharePointProjectItemId>
+    </None>
+    <None Include="NavigationImg\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ddaab1c2-d84c-4995-8b81-d712a2a59c04}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{ee8e8871-53cf-47ef-a0bc-a5abfac3808a}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\BreadCrumbNav\BreadCrumbNav.webpart" />
+    <None Include="WebParts\BreadCrumbNav\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4558866e-3069-4b26-a8a1-2e795b9046b2}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\ImageRender\ImageRender.webpart" />
+    <None Include="WebParts\ImageRender\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b98395e1-3e2e-44a7-8c22-f6de91fea008}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\MainNavigation\MainNavigation.webpart" />
+    <None Include="WebParts\MainNavigation\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c3e62c53-51b4-47be-b43f-45e455ab4fd0}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SubSiteNavigation\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ce15c5fc-88a9-4e5d-9990-e3023b0ca48b}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\SubSiteNavigation\SubSiteNavigation.webpart" />
+    <None Include="WebParts\TopNavigation\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{92f90cf9-2841-434b-9de8-f283323e7234}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\TopNavigation\TopNavigation.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMICT.CSP.BLL\CMICT.CSP.BLL.csproj">
+      <Project>{25a5825c-030e-4adc-bf6c-92cecf165286}</Project>
+      <Name>CMICT.CSP.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMICT.CSP.Model\CMICT.CSP.Model.csproj">
+      <Project>{f00fe832-6087-4144-ab92-f6ee4ee9e1e8}</Project>
+      <Name>CMICT.CSP.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Framework.Common\SP.Framework.Common.csproj">
+      <Project>{bf5b2831-908a-474f-acaf-f85ae6311720}</Project>
+      <Name>SP.Framework.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\GlobalWebPart\GlobalWebPart.Template.xml">
+      <DependentUpon>GlobalWebPart.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\NavigationImg\NavigationImg.Template.xml">
+      <DependentUpon>NavigationImg.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\LayoutPages\LayoutPages.Template.xml">
+      <DependentUpon>LayoutPages.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\MasterPages\MasterPages.Template.xml">
+      <DependentUpon>MasterPages.feature</DependentUpon>
+    </Content>
+    <Content Include="LayoutPages\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="LayoutPages\LayoutPageForContent.aspx" />
+    <Content Include="LayoutPages\LayoutPageForContent2.aspx" />
+    <Content Include="LayoutPages\LayoutPageForHome.aspx" />
+    <Content Include="LayoutPages\LayoutPageForPopUp.aspx" />
+    <Content Include="Layouts\CMICT.CSP.Branding\css\aidao.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\css\base.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\css\changyong.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\css\chunjie.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\css\jquery-ui.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\css\jquery.autocomplete.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\css\jquery.multiselect.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\css\permission.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\css\prettify.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\css\style.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\add-icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\addBtn-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\alert.ico" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\alert.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\bread-icon-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\bread-icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\breadlink-icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\chunjie_hoveron.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\close-icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\content-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\copyright-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\dateipt-icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\down.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\downjiantou.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\error.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\erweima-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\erweima-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\erweima.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\even-bg-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\even-bg-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\even-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\evenhover-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\export-bg-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\export-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\footer-logo.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\hanghuizong.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\header-bg-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\header-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\hover_on.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\hover_out.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-add.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-cancel.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-checkin.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-choose.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-copy.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-denglu-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-denglu-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-denglu.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-edit.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-guanwang-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-guanwang-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-guanwang.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-help-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-help-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-help.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-jinyong.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-jurisdiction.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-mainmenu.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-next.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-prev.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-remove.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-save.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-shanchu.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-shoucang-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-shoucang-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-shoucang.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-start.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-tishi.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-view.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-zhuye-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-zhuye-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\icon-zhuye.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-choose.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-down.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-huizong.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-iocnhuizongbiao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-iphone.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-jiagouyilan.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-no.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-putongliebiao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-quxiao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-renyuan.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-tuichu.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-up.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-xiala.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconfont-xiugaimima.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconMainA.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconMainB.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconMainC.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\iconMainD.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\impowerBtnBg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\input-icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\liehuizong.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\login-icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\logo-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\logo-txt-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\logo-txt.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\logo.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\odd-bg-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\odd-bg-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\odd-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\oddhover-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\putong.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\query-bg-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\query-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\reset-bg-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\reset-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\shade.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\single_arrow_down.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\single_arrow_right.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\slider-arrow.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\step-title-icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\stepBg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\stepcurrentBg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\stepPrevBg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\tianzi.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\tree_icons_add.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\tree_icons_subtract.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\updown.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\upjiandou.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\warp-bg-aidao.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\warp-bg-chunjie.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\warp-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\yes.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\内页3-添加模板1_11.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\images\内页3-添加模板1_13.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jqcool.net-DropKick\css\blank_theme.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jqcool.net-DropKick\css\dropkick.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jqcool.net-DropKick\example.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jqcool.net-DropKick\index.html" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jqcool.net-DropKick\jquery.dropkick-min.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jqcool.net-DropKick\jquery.dropkick.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\jquery-1.9.1.min.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\jquery-2.1.4.min.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\jquery-ui.min.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\extend\layer.ext.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\layer.min.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\icon_close.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\icon_ext.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\query-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\reset-bg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\textbg.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\xubox_ico0.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\xubox_loading0.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\xubox_loading1.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\xubox_loading2.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\xubox_loading3.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\default\xubox_title0.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\layer.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\jquery\layer\skin\layer.ext.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\ChangePwd.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\checkform.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\CodeMapping.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\daxie.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\html5.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\jquery.autocomplete.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\jquery.multiselect.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\jquery.SuperSlide.2.1.1.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\jquery.ui.core.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\jquery.ui.widget.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\ManageRights.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\Navigation.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\OrgnazationUser.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\prettify.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\Usage.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\ViewRights.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\js\wcfTest.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\laydate\laydate.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\laydate\need\laydate.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\laydate\skins\dahong\icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\laydate\skins\dahong\laydate.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\laydate\skins\default\icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\laydate\skins\default\laydate.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\laydate\skins\molv\icon.png" />
+    <Content Include="Layouts\CMICT.CSP.Branding\laydate\skins\molv\laydate.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\calendar.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\config.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\lang\en.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\blue\bg.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\blue\btnbg.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\blue\datepicker.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\blue\down.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\blue\left.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\blue\navLeft.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\blue\navRight.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\blue\qs.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\blue\right.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\blue\up.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\default\down.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\default\left.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\default\navLeft.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\default\navRight.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\default\right.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\default\up.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\down.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\left.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\navLeft.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\navRight.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\other\bg2.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\other\interface.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\right.gif" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\up.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\skin\whyGreen\ymbg.jpg" />
+    <Content Include="Layouts\CMICT.CSP.Branding\My97DatePicker\WdatePicker.js" />
+    <Content Include="MasterPages\Elements.xml" />
+    <Content Include="NavigationImg\Elements.xml" />
+    <Content Include="NavigationImg\NavigationImgs\changyong-erweima.png" />
+    <Content Include="NavigationImg\NavigationImgs\contentBg.png" />
+    <Content Include="NavigationImg\NavigationImgs\contentBg19.png" />
+    <Content Include="NavigationImg\NavigationImgs\headerBg.png" />
+    <Content Include="NavigationImg\NavigationImgs\headerBg19.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-denglu-aidao.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-denglu-chunjie.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-denglu.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-guanwang-aidao.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-guanwang-chunjie.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-guanwang.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-help-aidao.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-help-chunjie.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-help.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-shoucang-aidao.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-shoucang-chunjie.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-shoucang.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-topnav-default.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-zhuye-aidao.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-zhuye-chunjie.png" />
+    <Content Include="NavigationImg\NavigationImgs\icon-zhuye.png" />
+    <Content Include="NavigationImg\NavigationImgs\iconMainA.png" />
+    <Content Include="NavigationImg\NavigationImgs\iconMainB.png" />
+    <Content Include="NavigationImg\NavigationImgs\iconMainC.png" />
+    <Content Include="NavigationImg\NavigationImgs\iconMainD.png" />
+    <Content Include="NavigationImg\NavigationImgs\iconMainNav-default.png" />
+    <Content Include="WebParts\BreadCrumbNav\BreadCrumbNav.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>BreadCrumbNav.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\BreadCrumbNav\Elements.xml" />
+    <Content Include="WebParts\ImageRender\Elements.xml" />
+    <Content Include="WebParts\ImageRender\ImageRender.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>ImageRender.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\MainNavigation\Elements.xml" />
+    <Content Include="WebParts\MainNavigation\MainNavigation.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>MainNavigation.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\SubSiteNavigation\Elements.xml" />
+    <Content Include="WebParts\SubSiteNavigation\SubSiteNavigation.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>SubSiteNavigation.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\TopNavigation\Elements.xml" />
+    <Content Include="WebParts\TopNavigation\TopNavigation.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>TopNavigation.ascx.g.cs</LastGenOutput>
+    </Content>
+    <None Include="MasterPages\NewYear.master" />
+    <None Include="MasterPages\Normal.master" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

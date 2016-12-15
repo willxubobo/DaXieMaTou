@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="NavigationImg" Url="Style Library" RootWebOnly="TRUE">
+    <File Path="NavigationImg\NavigationImgs\icon-denglu-aidao.png" Url="NavigationImgs/icon-denglu-aidao.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-denglu-chunjie.png" Url="NavigationImgs/icon-denglu-chunjie.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-denglu.png" Url="NavigationImgs/icon-denglu.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-guanwang-aidao.png" Url="NavigationImgs/icon-guanwang-aidao.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-guanwang-chunjie.png" Url="NavigationImgs/icon-guanwang-chunjie.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-guanwang.png" Url="NavigationImgs/icon-guanwang.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-help-aidao.png" Url="NavigationImgs/icon-help-aidao.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-help-chunjie.png" Url="NavigationImgs/icon-help-chunjie.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-help.png" Url="NavigationImgs/icon-help.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-shoucang-aidao.png" Url="NavigationImgs/icon-shoucang-aidao.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-shoucang-chunjie.png" Url="NavigationImgs/icon-shoucang-chunjie.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-shoucang.png" Url="NavigationImgs/icon-shoucang.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-zhuye-aidao.png" Url="NavigationImgs/icon-zhuye-aidao.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-zhuye-chunjie.png" Url="NavigationImgs/icon-zhuye-chunjie.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-zhuye.png" Url="NavigationImgs/icon-zhuye.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\iconMainA.png" Url="NavigationImgs/iconMainA.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\iconMainB.png" Url="NavigationImgs/iconMainB.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\iconMainC.png" Url="NavigationImgs/iconMainC.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\iconMainD.png" Url="NavigationImgs/iconMainD.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\icon-topnav-default.png" Url="NavigationImgs/icon-topnav-default.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\iconMainNav-default.png" Url="NavigationImgs/iconMainNav-default.png"  Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\contentBg.png" Url="NavigationImgs/contentBg.png"   Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\headerBg.png" Url="NavigationImgs/headerBg.png"   Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\contentBg19.png" Url="NavigationImgs/contentBg19.png"   Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\headerBg19.png" Url="NavigationImgs/headerBg19.png"   Type="GhostableInLibrary"/>
+    <File Path="NavigationImg\NavigationImgs\changyong-erweima.png" Url="NavigationImgs/changyong-erweima.png"  Type="GhostableInLibrary"/>
+  </Module>
+</Elements>

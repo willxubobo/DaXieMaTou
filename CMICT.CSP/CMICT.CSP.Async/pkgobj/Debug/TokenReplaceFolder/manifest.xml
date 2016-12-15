@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="f3d0d2c0-98ac-42a2-8999-5730c478327c" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="Newtonsoft.Json.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="AspNetPager.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="CMICT.CSP.BLL.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="NET.Framework.Common.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="NPOI.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="NPOI.OOXML.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="NPOI.OpenXml4Net.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="NPOI.OpenXmlFormats.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="CMICT.CSP.Async.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="CMICT.CSP.Async, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8a0f2e402cdc4680" Namespace="CMICT.CSP.Async.WebParts.RegisterModule.RegisterAdd" TypeName="*" />
+        <SafeControl Assembly="CMICT.CSP.Async, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8a0f2e402cdc4680" Namespace="CMICT.CSP.Async.WebParts.RegisterModule.RegistServiceList" TypeName="*" />
+        <SafeControl Assembly="CMICT.CSP.Async, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8a0f2e402cdc4680" Namespace="CMICT.CSP.Async.WebParts.GlobalsSynchronize.GlobalData" TypeName="*" />
+        <SafeControl Assembly="CMICT.CSP.Async, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8a0f2e402cdc4680" Namespace="CMICT.CSP.Async.WebParts.DangerCTNReport" TypeName="*" />
+        <SafeControl Assembly="CMICT.CSP.Async, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8a0f2e402cdc4680" Namespace="CMICT.CSP.Async.WebParts.DangerPicManage" TypeName="*" />
+        <SafeControl Assembly="CMICT.CSP.Async, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8a0f2e402cdc4680" Namespace="CMICT.CSP.Async.WebParts.CIQchouxiang" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="Layouts\CMICT.CSP.Async\ApplicationPageHandler.aspx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="CMICT.CSP.Async_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

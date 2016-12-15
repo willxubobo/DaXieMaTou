@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="CMICT.CSP.Branding.WebParts.SubSiteNavigation.SubSiteNavigation, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">SubSiteNavigation</property>
+        <property name="Description" type="string">子站点导航</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

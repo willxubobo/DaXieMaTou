@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- 父内容类型: 项目 (0x01) -->
+  <ContentType ID="0x01008767FDC8498846E3B59F6584B5D848F0" Name="代码映射公司管理" Group="自定义内容类型" Description="我的内容类型" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{8864a931-0078-47f0-9d25-618a63daf09f}" DisplayName="公司ID" Name="COMPANY_ID" Required="TRUE" />
+      <FieldRef ID="{932699ee-7611-4716-88ba-0140561bfaa2}" DisplayName="公司名称" Name="COMPANY_NAME" Required="TRUE" />
+      <FieldRef ID="{0fbf169c-eacb-4980-8cd9-5c16e768fe5a}" DisplayName="接口参数" Name="INTERFACE_CODE" Required="TRUE" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

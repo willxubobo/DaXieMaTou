@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="代码映射接口维护" OnQuickLaunch="FALSE" TemplateType="10005" Url="Lists/CODE_MAPPING_SYNC" Description="代码映射接口维护"></ListInstance>
+</Elements>

@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js tree demo</title>
+
+<link href="css/style.min.css" rel="stylesheet" />
+<script type="text/javascript" src="../../JQuery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/jstree.min.js" ></script>
+
+<style>
+	html { margin:0; padding:0; font-size:62.5%; }
+	body { max-width:800px; min-width:300px; margin:0 auto; padding:20px 10px; font-size:14px; font-size:1.4em; }
+	h1 { font-size:1.8em; }
+	.demo { overflow:auto; border:1px solid silver; min-height:100px; }
+	</style>
+<script>
+$(function(){
+	$('#html').jstree();
+	// inline data demo
+	$('#data').jstree({
+		'core' : {
+			'data' : [
+				{ "text" : "Root node", "children" : [
+						{ "text" : "Child node 1" },
+						{ "text" : "Child node 2" }
+				]}
+			]
+		}
+	});
+	
+		// data format demo
+	$('#frmt').jstree({
+		'core' : {
+			'data' : [
+				{
+					"text" : "Root node",
+					"state" : { "opened" : true },
+					"children" : [
+						{
+							"text" : "Child node 1",
+							"state" : { "selected" : true },
+							"icon" : "jstree-file"
+						},
+						{ "text" : "Child node 2", "state" : { "disabled" : true } }
+					]
+				}
+			]
+		}
+	});
+	
+	// ajax demo
+	$('#ajax').jstree({
+		'core' : {
+			'data' : {
+				"url" : 'root.json',
+				"dataType" : "json" // needed only if you do not supply JSON headers
+			}
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+	<h1>HTML demo</h1>
+<div id="html" class="demo">
+		<ul>
+			<li data-jstree='{ "opened" : true }'>Root node
+				<ul>
+					<li data-jstree='{ "selected" : true }'>Child node 1</li>
+					<li>Child node 2</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+    
+    <h1>Inline data demo</h1>
+	<div id="data" class="demo"></div>
+    
+    <h1>Data format demo</h1>
+	<div id="frmt" class="demo"></div>
+    
+    <h1>AJAX demo</h1>
+	<div id="ajax" class="demo"></div>
+</html>

@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Full Calendar Demo</title>
+<link href='css/fullcalendar.css' rel='stylesheet' />
+<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src="js/moment.min.js"></script>
+<script src="../../JQuery/jquery-2.1.4.min.js"></script>
+<script src="js/fullcalendar.min.js"></script>
+
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+<script>
+$(function(){
+		$('#calendar').fullCalendar({
+			defaultDate: new Date(),
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: 'All Day Event',
+					start: '2015-06-01'
+				},
+				{
+					title: 'Long Event',
+					start: '2015-06-07',
+					end: '2015-06-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2015-06-09T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2015-06-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2015-06-11',
+					end: '2015-06-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2015-06-12T10:30:00',
+					end: '2015-06-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2015-06-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2015-06-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2015-06-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2015-06-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2015-06-13T07:00:00'
+				},
+				{
+					title: 'Click for Baidu',
+					url: 'http://www.baidu.com',
+					start: '2015-06-28'
+				}
+			]
+		});
+})
+
+</script>
+</head>
+
+<body>
+	<div id='calendar'></div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>zTree Demo</title>
+<link href="css/zTreeStyle.css" rel="stylesheet" />
+<script type="text/javascript" src="../../JQuery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.core-3.5.js" ></script>
+	<style type="text/css">
+.ztree li span.button.pIcon01_ico_open{margin-right:2px; background: url(./css/img/diy/1_open.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.pIcon01_ico_close{margin-right:2px; background: url(./css/img/diy/1_close.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.pIcon02_ico_open, .ztree li span.button.pIcon02_ico_close{margin-right:2px; background: url(./css/img/diy/2.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon01_ico_docu{margin-right:2px; background: url(./css/img/diy/3.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon02_ico_docu{margin-right:2px; background: url(./css/img/diy/4.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon03_ico_docu{margin-right:2px; background: url(./css/img/diy/5.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon04_ico_docu{margin-right:2px; background: url(./css/img/diy/6.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon05_ico_docu{margin-right:2px; background: url(./css/img/diy/7.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+.ztree li span.button.icon06_ico_docu{margin-right:2px; background: url(./css/img/diy/8.png) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
+	</style>
+<SCRIPT type="text/javascript" >
+var setting1 = {	};
+
+		var zNodes1 =[
+			{ name:"父节点1 - 展开", open:true,
+				children: [
+					{ name:"父节点11 - 折叠",
+						children: [
+							{ name:"叶子节点111"},
+							{ name:"叶子节点112"},
+							{ name:"叶子节点113"},
+							{ name:"叶子节点114"}
+						]},
+					{ name:"父节点12 - 折叠",
+						children: [
+							{ name:"叶子节点121"},
+							{ name:"叶子节点122"},
+							{ name:"叶子节点123"},
+							{ name:"叶子节点124"}
+						]},
+					{ name:"父节点13 - 没有子节点", isParent:true}
+				]},
+			{ name:"父节点2 - 折叠",
+				children: [
+					{ name:"父节点21 - 展开", open:true,
+						children: [
+							{ name:"叶子节点211"},
+							{ name:"叶子节点212"},
+							{ name:"叶子节点213"},
+							{ name:"叶子节点214"}
+						]},
+					{ name:"父节点22 - 折叠",
+						children: [
+							{ name:"叶子节点221"},
+							{ name:"叶子节点222"},
+							{ name:"叶子节点223"},
+							{ name:"叶子节点224"}
+						]},
+					{ name:"父节点23 - 折叠",
+						children: [
+							{ name:"叶子节点231"},
+							{ name:"叶子节点232"},
+							{ name:"叶子节点233"},
+							{ name:"叶子节点234"}
+						]}
+				]},
+			{ name:"父节点3 - 没有子节点", isParent:true}
+
+		];
+		
+		var setting2 = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes2 =[
+			{ id:1, pId:0, name:"展开、折叠 自定义图标不同", open:true, iconSkin:"pIcon01"},
+			{ id:11, pId:1, name:"叶子节点1", iconSkin:"icon01"},
+			{ id:12, pId:1, name:"叶子节点2", iconSkin:"icon02"},
+			{ id:13, pId:1, name:"叶子节点3", iconSkin:"icon03"},
+			{ id:2, pId:0, name:"展开、折叠 自定义图标相同", open:true, iconSkin:"pIcon02"},
+			{ id:21, pId:2, name:"叶子节点1", iconSkin:"icon04"},
+			{ id:22, pId:2, name:"叶子节点2", iconSkin:"icon05"},
+			{ id:23, pId:2, name:"叶子节点3", iconSkin:"icon06"},
+			{ id:3, pId:0, name:"不使用自定义图标", open:true },
+			{ id:31, pId:3, name:"叶子节点1"},
+			{ id:32, pId:3, name:"叶子节点2"},
+			{ id:33, pId:3, name:"叶子节点3"}
+		];
+
+$(function(){
+	$.fn.zTree.init($("#treeDemo1"), setting1, zNodes1);
+	$.fn.zTree.init($("#treeDemo2"), setting2, zNodes2);
+})
+
+
+</script>
+</head>
+
+<body>
+<div style="background-color: lightcyan;">
+	<ul id="treeDemo1" class="ztree"></ul>
+</div>
+
+<div style="margin-top:50px;background-color: lightgoldenrodyellow;">
+		<ul id="treeDemo2" class="ztree"></ul>
+	</div>
+</body>
+</html>

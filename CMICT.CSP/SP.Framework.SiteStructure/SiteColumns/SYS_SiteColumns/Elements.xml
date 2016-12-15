@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!--SYS_LookupTypes_ContentType Columns Start-->
+  <Field ID="{A0D69522-274A-458C-BB21-5DD4DEC5B037}" Name="APP_CODE" DisplayName="APP_CODE" Type="Text" Required="FALSE" Group="SYS_Columns">
+  </Field>
+  <Field ID="{D1C38307-8BD3-4E75-92B5-AB42B65780D6}" Name="SYSCODE_FLAG" DisplayName="SYSCODE_FLAG" Type="Boolean" Required="FALSE" Group="SYS_Columns">
+  </Field>
+  <Field ID="{A3A63C98-AFE0-4B84-A62A-C83FCDD4AA48}" Name="LOOKUP_CODE" DisplayName="LOOKUP_CODE" Type="Text" Required="FALSE" Group="SYS_Columns" EnforceUniqueValues="TRUE" Indexed="TRUE" >
+  </Field>
+  <Field ID="{6C887616-7FF0-43C2-903A-837069EFC393}" Name="LOOKUP_NAME" DisplayName="LOOKUP_NAME" Type="Text" Required="FALSE" Group="SYS_Columns">
+  </Field>
+  <Field ID="{CD63EA9E-B1BB-4061-8804-452D4B33557A}" Name="REMARK" DisplayName="REMARK" Type="Note" Required="FALSE" Group="SYS_Columns">
+  </Field>
+  <Field ID="{25C32A16-8B01-42F0-8A91-DF0A8A0AB4B5}" Name="ENABLE" DisplayName="ENABLE" Type="Boolean" Required="FALSE" Group="SYS_Columns">
+  </Field>
+  <Field ID="{F4371807-7595-43D1-AC32-0B8E9BA26388}" Name="SEQUENCE" DisplayName="SEQUENCE" Type="Number" Required="FALSE" Group="SYS_Columns">
+  </Field>
+  <!--SYS_LookupTypes_ContentType Columns Start-->
+
+  <!--SYS_LookupValues_ContentType Columns Start-->
+  <Field ID="{D6F2DE8D-7EEE-4DAE-ACF3-07F2F1A71B1B}" Name="LOOKUP_VALUE" DisplayName="LOOKUP_VALUE" Type="Text" Required="FALSE" Group="SYS_Columns" EnforceUniqueValues="TRUE" Indexed="TRUE" >
+  </Field>
+  <Field ID="{8A0A6928-A6DF-4119-A19B-19BA4F3A2510}" Name="LOOKUP_VALUE_NAME" DisplayName="LOOKUP_VALUE_NAME" Type="Text" Required="FALSE" Group="SYS_Columns">
+  </Field>
+  <!--SYS_LookupValues_ContentType Columns Start-->
+  
+  <!--Custom Lookup Field Type-->
+  <Field Name="LOOKUP_CODE_LINE" ID="{3C63E0D9-FF56-4F6B-BA67-CC8DA3CD98C6}" DisplayName="LOOKUP_CODE_LINE" Type="Lookup" List="lists/SYS_LOOKUP_TYPES" SourceID="" ShowField="LOOKUP_CODE" Group="Custom Lookup"  />
+  <Field Name="USER_LOOKUP_CODE_LINE" ID="{E2FB74BA-8C2D-414D-B0A2-2807D3E7A999}" DisplayName="报表大类" Type="Lookup" List="lists/USER_LOOKUP_TYPES" SourceID="" ShowField="LinkTitle" Group="Custom Lookup" Indexed="TRUE" RestrictedMode="TRUE"  RelationshipDeleteBehavior="Restrict"  />
+  
+  <!--Custom Lookup Field Type-->
+  
+  <!--Code Mapping Content Type Columns Start-->
+  <Field ID="{e8195af0-5d02-4e84-96dc-21a6e668f300}" Name="COMPANY_NAME" DisplayName="公司名称" Type="Lookup" List="Lists/CODE_MAPPING_COMPANY" SourceID="" ShowField="COMPANY_NAME" Required="TRUE" Group="Custom Lookup">
+  </Field>
+  <Field ID="{db17f26e-10b0-4de9-a005-3b1b7554b060}" Name="DESCRIPTION" DisplayName="描述" Type="Text" Required="TRUE" Group="SYS_Columns">
+  </Field>
+  <Field ID="{ef8b6a6e-b423-4577-b2c3-7ed4e5fde63f}" Name="CODE_TYPE" DisplayName="业务类型" Type="Text" Required="TRUE" Group="SYS_Columns">
+  </Field>
+  <!--Code Mapping Content Type Columns End-->
+
+  <!--Company Management Content Type Columns Start-->
+  <Field ID="{8864a931-0078-47f0-9d25-618a63daf09f}" Name="COMPANY_ID" DisplayName="公司ID" Type="Text" Required="TRUE" Group="SYS_Columns">
+  </Field>
+  <Field ID="{932699ee-7611-4716-88ba-0140561bfaa2}" Name="COMPANY_NAME" DisplayName="公司名称" Type="Text" Required="TRUE" Group="SYS_Columns">
+  </Field>
+  <Field ID="{0fbf169c-eacb-4980-8cd9-5c16e768fe5a}" Name="INTERFACE_CODE" DisplayName="接口参数" Type="Text" Required="TRUE" Group="SYS_Columns">
+  </Field>
+  <!--Company Management Content Type Columns End-->
+</Elements>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="SubSiteNavigation" List="113" Url="_catalogs/wp">
+    <File Path="SubSiteNavigation\SubSiteNavigation.webpart" Url="CMICT.CSP.Branding_SubSiteNavigation.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="GlobalWebPart" />
+    </File>
+  </Module>
+</Elements>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="CMICT.CSP.Web.TemplateConfig.Preview.Preview, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Preview</property>
+        <property name="Description" type="string">模板配置向导-预览</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

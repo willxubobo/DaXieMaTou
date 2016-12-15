@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="SYS_LOOKUP_TYPES" OnQuickLaunch="FALSE" TemplateType="10003" Url="Lists/SYS_LOOKUP_TYPES" Description="查阅表-主表"></ListInstance>
+</Elements>

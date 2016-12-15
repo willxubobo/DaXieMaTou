@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="f3200d73-19a8-4032-aaf0-3e0909c61a05" solutionId="f3200d73-19a8-4032-aaf0-3e0909c61a05" resetWebServer="false" sharePointProductVersion="15.0" name="CMICT.CSP.WCF" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="89a60a8d-cf52-48b0-8ac9-6e883543e4d9" />
+  </projectItems>
+</package>

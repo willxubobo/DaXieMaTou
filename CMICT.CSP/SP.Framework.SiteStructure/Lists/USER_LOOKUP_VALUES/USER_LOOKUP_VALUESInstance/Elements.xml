@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="报表细类" OnQuickLaunch="FALSE" TemplateType="10004" Url="Lists/USER_LOOKUP_VALUES" Description=""></ListInstance>
+</Elements>

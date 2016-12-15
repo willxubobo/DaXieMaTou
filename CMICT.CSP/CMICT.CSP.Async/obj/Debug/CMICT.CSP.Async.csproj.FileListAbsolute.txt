@@ -1,0 +1,5 @@
+D:\Code\CMICT.CSP\CMICT.CSP.Async\bin\Debug\CMICT.CSP.Async.dll
+D:\Code\CMICT.CSP\CMICT.CSP.Async\bin\Debug\CMICT.CSP.Async.pdb
+D:\Code\CMICT.CSP\CMICT.CSP.Async\obj\Debug\CMICT.CSP.Async.csprojResolveAssemblyReference.cache
+D:\Code\CMICT.CSP\CMICT.CSP.Async\obj\Debug\CMICT.CSP.Async.dll
+D:\Code\CMICT.CSP\CMICT.CSP.Async\obj\Debug\CMICT.CSP.Async.pdb

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://10.2.2.222:8888/CM.CTOS.WebServiceLayer.back/QGCostco.asmx?wsdl" docRef="http://10.2.2.222:8888/CM.CTOS.WebServiceLayer.back/QGCostco.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://10.2.2.222:8888/CM.CTOS.WebServiceLayer.back/QGCostco.asmx" xmlns:q1="http://service.cmict.com/" binding="q1:QGCostcoSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://10.2.2.222:8888/CM.CTOS.WebServiceLayer.back/QGCostco.asmx" xmlns:q2="http://service.cmict.com/" binding="q2:QGCostcoSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

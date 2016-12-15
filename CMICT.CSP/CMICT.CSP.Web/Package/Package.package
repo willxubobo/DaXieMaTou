@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="445cb196-bff6-4f23-8f79-e8156cfb7826" solutionId="445cb196-bff6-4f23-8f79-e8156cfb7826" resetWebServer="false" sharePointProductVersion="15.0" name="CMICT.CSP.Web" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="CMICT.CSP.BLL.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\CMICT.CSP.BLL\CMICT.CSP.BLL.csproj" />
+    <customAssembly location="AspNetPager.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="ISAPI\AspNetPager.dll" />
+    <projectOutputAssembly location="CMICT.CSP.Model.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\CMICT.CSP.Model\CMICT.CSP.Model.csproj" />
+    <projectOutputAssembly location="NET.Framework.Common.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\NET.Framework.Common\NET.Framework.Common.csproj" />
+    <projectOutputAssembly location="SP.Framework.Common.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\SP.Framework.Common\SP.Framework.Common.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="36932695-d420-411c-8f98-628c50e9adae" />
+    <featureReference itemId="a1b11998-717a-438d-b056-2b61f60b2bc6" />
+    <featureReference itemId="390a8e38-c21b-4419-be19-fe3bf7946a23" />
+    <featureReference itemId="c53083ae-79ce-416a-87c3-f5b599c7f0fb" />
+    <featureReference itemId="7e745b2f-349e-4f79-9687-8e5a80d9388d" />
+    <featureReference itemId="056047a9-e3ac-4541-966f-919bd4c1ea27" />
+    <featureReference itemId="4f9a1e97-744a-4efc-9070-0a728c5a337e" />
+    <featureReference itemId="65a3c645-9296-4c28-bb78-d4024158e538" />
+    <featureReference itemId="35093bb0-7395-46be-b6fd-2fea42a20eb5" />
+    <featureReference itemId="9930382a-e1c6-4c58-a8f5-3632e43846cc" />
+    <featureReference itemId="4130f57f-a904-4edb-86fc-464064a722cd" />
+    <featureReference itemId="868639de-df3a-46e6-8232-bd9a62071206" />
+    <featureReference itemId="bfb7c77a-d075-46ea-a279-7a7a69046d85" />
+    <featureReference itemId="a1d064cb-4bab-4a11-8b55-3dcfbafbceea" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="4357d8b8-c98f-4b48-ab58-5e7fba49164c" />
+    <projectItemReference itemId="ad676411-be46-4f4d-986e-16f72e0154f6" />
+  </projectItems>
+</package>

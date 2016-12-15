@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="NAVIGATION_MANAGEMENT" OnQuickLaunch="FALSE" TemplateType="10002" Url="Lists/NAVIGATION_MANAGEMENT" Description="导航管理"></ListInstance>
+</Elements>

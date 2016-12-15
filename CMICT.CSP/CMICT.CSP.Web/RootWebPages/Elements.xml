@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="RootWebPages"  Path="RootWebPages" Url="Pages" RootWebOnly="TRUE">
+    <!--ChangePassword Page Start-->
+    <File Path="ChangePassword\ChangePassword.aspx" Url="ChangePassword/ChangePassword.aspx" Type="GhostableInLibrary" ReplaceContent="TRUE">
+      <AllUsersWebPart WebPartOrder="1" WebPartZoneID="Content" >
+        <![CDATA[
+        <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="CMICT.CSP.Web.ChangeUserPwd.ChangePassword.ChangePassword, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">ChangePassword</property>
+        <property name="Description" type="string">修改用户密码</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>]]>
+      </AllUsersWebPart>
+      <Property Name="ContentTypeId" Value="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390064DEA0F50FC8C147B0B6EA0636C4A7D40012B91A4460A9204083637878A094E8E2"/>
+      <Property Name="FileLeafRef" Value="ChangePassword/ChangePassword.aspx"/>
+      <Property Name="PublishingPageLayout" Value="~sitecollection/_catalogs/masterpage/LayoutPageForPopUp.aspx, 客户服务平台弹出页面布局页"/>
+    </File>
+    <!--ChangePassword Page End-->
+    
+    <!--CustomError Page Start-->
+    <File Path="ErrorPage\ErrorPage.aspx" Url="ErrorPage/ErrorPage.aspx" Type="GhostableInLibrary" ReplaceContent="TRUE">
+      <AllUsersWebPart WebPartOrder="1" WebPartZoneID="Content" >
+        <![CDATA[
+        <webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="CMICT.CSP.Web.CustomerError.CustomerError.CustomerError, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">CustomerError</property>
+        <property name="Description" type="string">自定义错误页面</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>]]>
+      </AllUsersWebPart>
+      <Property Name="ContentTypeId" Value="0x010100C568DB52D9D0A14D9B2FDCC96666E9F2007948130EC3DB064584E219954237AF390064DEA0F50FC8C147B0B6EA0636C4A7D40012B91A4460A9204083637878A094E8E2"/>
+      <Property Name="FileLeafRef" Value="ErrorPage/ErrorPage.aspx"/>
+      <Property Name="PublishingPageLayout" Value="~sitecollection/_catalogs/masterpage/LayoutPageForPopUp.aspx, 客户服务平台弹出页面布局页"/>
+    </File>
+    <!--CustomError Page End-->
+  </Module>
+</Elements>

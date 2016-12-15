@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="SYS_LOOKUP_VALUES" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/SYS_LOOKUP_VALUES" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100EF2F31A7FDE2463E8F7718E8F9075690" Name="SYS_LookupValues_ContentType" Group="自定义内容类型" Description="我的内容类型" Inherits="TRUE" Version="0"><FieldRefs><FieldRef ID="{3C63E0D9-FF56-4F6B-BA67-CC8DA3CD98C6}" DisplayName="LOOKUP_CODE_LINE" Name="LOOKUP_CODE_LINE" /><FieldRef ID="{D6F2DE8D-7EEE-4DAE-ACF3-07F2F1A71B1B}" DisplayName="LOOKUP_VALUE" Required="TRUE" Name="LOOKUP_VALUE" /><FieldRef ID="{8A0A6928-A6DF-4119-A19B-19BA4F3A2510}" DisplayName="LOOKUP_VALUE_NAME" Required="FALSE" Name="LOOKUP_VALUE_NAME" /><FieldRef ID="{CD63EA9E-B1BB-4061-8804-452D4B33557A}" DisplayName="REMARK" Required="FALSE" Name="REMARK" /><FieldRef ID="{25C32A16-8B01-42F0-8A91-DF0A8A0AB4B5}" DisplayName="ENABLE" Required="FALSE" Name="ENABLE" /></FieldRefs></ContentType></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" Hidden="TRUE" /><Field Name="LOOKUP_CODE_LINE" ID="{3C63E0D9-FF56-4F6B-BA67-CC8DA3CD98C6}" DisplayName="LOOKUP_CODE_LINE" Type="Lookup" List="lists/SYS_LOOKUP_TYPES" SourceID="" ShowField="LOOKUP_CODE" Group="Custom Lookup" Required="TRUE" /><Field ID="{D6F2DE8D-7EEE-4DAE-ACF3-07F2F1A71B1B}" Name="LOOKUP_VALUE" DisplayName="LOOKUP_VALUE" Type="Text" Required="TRUE" Group="SYS_Columns" AllowDuplicateValues="FALSE"></Field><Field ID="{8A0A6928-A6DF-4119-A19B-19BA4F3A2510}" Name="LOOKUP_VALUE_NAME" DisplayName="LOOKUP_VALUE_NAME" Type="Text" Required="TRUE" Group="SYS_Columns"></Field><Field ID="{CD63EA9E-B1BB-4061-8804-452D4B33557A}" Name="REMARK" DisplayName="REMARK" Type="Note" Required="FALSE" Group="SYS_Columns"></Field><Field ID="{25C32A16-8B01-42F0-8A91-DF0A8A0AB4B5}" Name="ENABLE" DisplayName="ENABLE" Type="Boolean" Required="TRUE" Group="SYS_Columns"></Field><Field ID="{F4371807-7595-43D1-AC32-0B8E9BA26388}" Name="SEQUENCE" DisplayName="SEQUENCE" Type="Number" Required="FALSE" Group="SYS_Columns"></Field></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LOOKUP_CODE_LINE" /><FieldRef Name="LOOKUP_VALUE" /><FieldRef Name="LOOKUP_VALUE_NAME" /><FieldRef Name="REMARK" /><FieldRef Name="ENABLE" /><FieldRef Name="SEQUENCE" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

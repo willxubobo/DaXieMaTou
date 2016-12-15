@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="RegisterAdd" List="113" Url="_catalogs/wp">
+    <File Path="RegisterAdd\RegisterAdd.webpart" Url="CMICT.CSP.Async_RegisterAdd.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

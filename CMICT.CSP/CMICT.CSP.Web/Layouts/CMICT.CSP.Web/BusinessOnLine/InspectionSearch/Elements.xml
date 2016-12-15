@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="InspectionSearch" List="113" Url="_catalogs/wp">
+    <File Path="InspectionSearch\InspectionSearch.webpart" Url="CMICT.CSP.Web_InspectionSearch.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="BusinessOnline" />
+    </File>
+  </Module>
+</Elements>

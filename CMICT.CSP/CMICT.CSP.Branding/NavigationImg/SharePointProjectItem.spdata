@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="NavigationImg\" Type="ElementManifest" />
+    <ProjectItemFile Source="NavigationImgs\icon-denglu-aidao.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-denglu-chunjie.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-denglu.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-guanwang-aidao.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-guanwang-chunjie.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-guanwang.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-help-aidao.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-help-chunjie.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-help.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-shoucang-aidao.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-shoucang-chunjie.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-shoucang.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-zhuye-aidao.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-zhuye-chunjie.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-zhuye.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\iconMainA.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\iconMainB.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\iconMainC.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\iconMainD.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\icon-topnav-default.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\iconMainNav-default.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\contentBg.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\headerBg.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\contentBg19.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\headerBg19.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+    <ProjectItemFile Source="NavigationImgs\changyong-erweima.png" Target="NavigationImg\NavigationImgs\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

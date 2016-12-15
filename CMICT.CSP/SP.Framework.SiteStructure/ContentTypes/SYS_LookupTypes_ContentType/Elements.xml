@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- 父内容类型: 项目 (0x01) -->
+  <ContentType ID="0x010093CE353CFF0841A58CDC38D39025517C" Name="SYS_LookupTypes_ContentType" Group="自定义内容类型" Description="我的内容类型" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{A0D69522-274A-458C-BB21-5DD4DEC5B037}" DisplayName="APP_CODE" Required="FALSE" Name="APP_CODE" />
+      <FieldRef ID="{D1C38307-8BD3-4E75-92B5-AB42B65780D6}" DisplayName="SYSCODE_FLAG" Required="FALSE" Name="SYSCODE_FLAG" />
+      <FieldRef ID="{A3A63C98-AFE0-4B84-A62A-C83FCDD4AA48}" DisplayName="LOOKUP_CODE" Required="FALSE" Name="LOOKUP_CODE" />
+      <FieldRef ID="{6C887616-7FF0-43C2-903A-837069EFC393}" DisplayName="LOOKUP_NAME" Required="FALSE" Name="LOOKUP_NAME" />
+      <FieldRef ID="{CD63EA9E-B1BB-4061-8804-452D4B33557A}" DisplayName="REMARK" Required="FALSE" Name="REMARK" />
+      <FieldRef ID="{25C32A16-8B01-42F0-8A91-DF0A8A0AB4B5}" DisplayName="ENABLE" Required="FALSE" Name="ENABLE" />
+      <FieldRef ID="{F4371807-7595-43D1-AC32-0B8E9BA26388}" DisplayName="SEQUENCE" Required="FALSE" Name="SEQUENCE" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

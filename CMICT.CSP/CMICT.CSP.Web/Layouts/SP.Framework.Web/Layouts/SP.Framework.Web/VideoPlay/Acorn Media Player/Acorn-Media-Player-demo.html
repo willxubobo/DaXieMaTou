@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Aconrn-Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <!-- <link href="css/amp-website.css" rel="stylesheet" type="text/css" /> -->
+	<!-- Acorn Media Player specific -->
+	<link href="css/acornmediaplayer.base.css" rel="stylesheet" type="text/css">
+	<!-- Themes -->
+	<link href="css/acorn.access.css" rel="stylesheet" type="text/css">
+	<link href="css/acorn.darkglass.css" rel="stylesheet" type="text/css">
+	<link href="css/acorn.barebones.css" rel="stylesheet" type="text/css">
+    <script src="../../JQuery/jquery-2.1.4.min.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery.acornmediaplayer.js"></script>
+</head>
+<body>
+	<div class="demoBox">
+        <p class="demoTitle">Aconrn视频播放</p>
+        <div class="videoBoxOne">
+        	<figure>
+				<video id="demo3" controls="controls" width="826" height="360" poster="images/tos-poster.jpg" preload="metadata" aria-describedby="full-descript">
+					<source type="video/webm" src="https://acornmedia.herokuapp.com/media/tears_of_steel_480.webm" />
+					<source type="video/mp4" src="https://acornmedia.herokuapp.com/media/tears_of_steel_480.mp4" />
+
+					<track src="subs/TOS-arabic.srt" kind="subtitles" srclang="ar" label="Arabic" />
+					<track src="subs/TOS-japanese.srt" kind="subtitles" srclang="jp" label="Japanese" />
+					<track src="subs/TOS-english.srt" kind="subtitles" srclang="en" label="English" />
+					<track src="subs/TOS-turkish.srt" kind="subtitles" srclang="tr" label="Turkish" />
+					<track src="subs/TOS-ukrainian.srt" kind="subtitles" srclang="uk" label="Ukrainian" />
+
+					You can download Tears of Steel at <a href="http://mango.blender.org/">mango.blender.org</a>.
+				</video>
+			</figure>
+        </div>
+	</div>
+	<script type="text/javascript">
+	    jQuery(function() {
+		    jQuery('#demo3, #demo3-audio').acornMediaPlayer({
+				theme: 'darkglass',
+				volumeSlider: 'vertical'
+			});
+		});
+    </script>
+</body>
+</html>

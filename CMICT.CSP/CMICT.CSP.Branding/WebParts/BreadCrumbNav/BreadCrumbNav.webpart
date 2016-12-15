@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="CMICT.CSP.Branding.WebParts.BreadCrumbNav.BreadCrumbNav, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">BreadCrumbNav</property>
+        <property name="Description" type="string">面包屑导航</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

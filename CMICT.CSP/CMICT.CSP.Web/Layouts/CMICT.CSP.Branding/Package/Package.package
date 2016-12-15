@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="ee8e8871-53cf-47ef-a0bc-a5abfac3808a" solutionId="ee8e8871-53cf-47ef-a0bc-a5abfac3808a" resetWebServer="false" sharePointProductVersion="15.0" name="CMICT.CSP.Branding" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="6f682d51-e0cb-410b-93d7-bf4c4ffabfe4" />
+    <featureReference itemId="dff5ea63-603d-4022-873f-29a7df58b704" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="1fa806c3-8be1-452d-9549-8aac93b1d072" />
+  </projectItems>
+</package>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- 父内容类型: 项目 (0x01) -->
+  <ContentType ID="0x0100AA9B402A9A074DE8B0890165C1C8C232" Name="Navigation_ContentType" Group="自定义内容类型" Description="我的内容类型" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{B5BADF01-860C-43EE-A27E-D0BA4B61AB57}" DisplayName="LoginUser" Required="FALSE" Name="LoginUser" />
+      <FieldRef ID="{882FF10B-2B4B-44F1-BAA2-14E6AB90481E}" DisplayName="OU" Required="FALSE" Name="OU" />
+      <FieldRef ID="{811B3A00-2114-4BD6-A061-31CB3E8A6A0A}" DisplayName="RedirectUrl" Required="FALSE" Name="RedirectUrl" />
+      <FieldRef ID="{CD63EA9E-B1BB-4061-8804-452D4B33557A}" DisplayName="REMARK" Required="FALSE" Name="REMARK" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

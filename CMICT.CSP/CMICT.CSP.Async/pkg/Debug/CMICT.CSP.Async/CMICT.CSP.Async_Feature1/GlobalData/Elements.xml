@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="GlobalData" List="113" Url="_catalogs/wp">
+    <File Path="GlobalData\GlobalData.webpart" Url="CMICT.CSP.Async_GlobalData.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="Custom" />
+    </File>
+  </Module>
+</Elements>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="Preview" List="113" Url="_catalogs/wp">
+    <File Path="Preview\Preview.webpart" Url="CMICT.CSP.Web_Preview.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="TemplateConfig" />
+    </File>
+  </Module>
+</Elements>

@@ -1,0 +1,6 @@
+D:\Code\CMICT.CSP\CMICT.CSP.WebDataSubscribe\bin\CMICT.CSP.WebDataSubscribe.dll.config
+D:\Code\CMICT.CSP\CMICT.CSP.WebDataSubscribe\bin\CMICT.CSP.WebDataSubscribe.dll
+D:\Code\CMICT.CSP\CMICT.CSP.WebDataSubscribe\bin\CMICT.CSP.WebDataSubscribe.pdb
+D:\Code\CMICT.CSP\CMICT.CSP.WebDataSubscribe\obj\Debug\CMICT.CSP.WebDataSubscribe.csprojResolveAssemblyReference.cache
+D:\Code\CMICT.CSP\CMICT.CSP.WebDataSubscribe\obj\Debug\CMICT.CSP.WebDataSubscribe.dll
+D:\Code\CMICT.CSP\CMICT.CSP.WebDataSubscribe\obj\Debug\CMICT.CSP.WebDataSubscribe.pdb

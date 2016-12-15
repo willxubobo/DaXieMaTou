@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="NAVIGATION_MANAGEMENT" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/NAVIGATION_MANAGEMENT" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100AA9B402A9A074DE8B0890165C1C8C232" Name="Navigation_ContentType" Group="自定义内容类型" Description="我的内容类型" Inherits="TRUE" Version="0"><FieldRefs><FieldRef ID="{B5BADF01-860C-43EE-A27E-D0BA4B61AB57}" DisplayName="LoginUser" Required="FALSE" Name="LoginUser" /><FieldRef ID="{882FF10B-2B4B-44F1-BAA2-14E6AB90481E}" DisplayName="OU" Required="FALSE" Name="OU" /><FieldRef ID="{811B3A00-2114-4BD6-A061-31CB3E8A6A0A}" DisplayName="RedirectUrl" Required="FALSE" Name="RedirectUrl" /><FieldRef ID="{CD63EA9E-B1BB-4061-8804-452D4B33557A}" DisplayName="REMARK" Required="FALSE" Name="REMARK" /></FieldRefs></ContentType></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" Hidden="TRUE" /><Field ID="{B5BADF01-860C-43EE-A27E-D0BA4B61AB57}" Name="LoginUser" DisplayName="LoginUser" Type="User" Required="TRUE" Group="Navigation" Indexed="TRUE" EnforceUniqueValues="TRUE" ></Field><Field ID="{882FF10B-2B4B-44F1-BAA2-14E6AB90481E}" Name="OU" DisplayName="OU" Type="Text" Required="TRUE" Group="Navigation"></Field><Field ID="{811B3A00-2114-4BD6-A061-31CB3E8A6A0A}" Name="RedirectUrl" DisplayName="RedirectUrl" Type="URL" Required="TRUE" Group="Navigation"></Field><Field ID="{CD63EA9E-B1BB-4061-8804-452D4B33557A}" Name="REMARK" DisplayName="REMARK" Type="Note" Required="FALSE" Group="SYS_Columns"></Field></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LoginUser" /><FieldRef Name="OU" /><FieldRef Name="RedirectUrl" /><FieldRef Name="REMARK" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

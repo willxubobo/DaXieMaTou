@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.ediesb.nbport.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="EDIESBService" targetNamespace="http://service.ediesb.nbport.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://service.ediesb.nbport.com/">
+      <xsd:element name="callEDIESBPub" type="tns:callEDIESBPub" />
+      <xsd:complexType name="callEDIESBPub">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg1" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg2" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg3" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg4" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg5" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="callEDIESBPubResponse" type="tns:callEDIESBPubResponse" />
+      <xsd:complexType name="callEDIESBPubResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="callEDIESB" type="tns:callEDIESB" />
+      <xsd:complexType name="callEDIESB">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="arg0" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg1" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg2" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg3" type="xsd:string" />
+          <xsd:element minOccurs="0" name="arg4" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="callEDIESBResponse" type="tns:callEDIESBResponse" />
+      <xsd:complexType name="callEDIESBResponse">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="return" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="callEDIESBResponse">
+    <wsdl:part name="parameters" element="tns:callEDIESBResponse" />
+  </wsdl:message>
+  <wsdl:message name="callEDIESB">
+    <wsdl:part name="parameters" element="tns:callEDIESB" />
+  </wsdl:message>
+  <wsdl:message name="callEDIESBPub">
+    <wsdl:part name="parameters" element="tns:callEDIESBPub" />
+  </wsdl:message>
+  <wsdl:message name="callEDIESBPubResponse">
+    <wsdl:part name="parameters" element="tns:callEDIESBPubResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EDIESBServicePortType">
+    <wsdl:operation name="callEDIESBPub">
+      <wsdl:input name="callEDIESBPub" message="tns:callEDIESBPub" />
+      <wsdl:output name="callEDIESBPubResponse" message="tns:callEDIESBPubResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="callEDIESB">
+      <wsdl:input name="callEDIESB" message="tns:callEDIESB" />
+      <wsdl:output name="callEDIESBResponse" message="tns:callEDIESBResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EDIESBServiceSoapBinding" type="tns:EDIESBServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="callEDIESB">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="callEDIESB">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="callEDIESBResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callEDIESBPub">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="callEDIESBPub">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="callEDIESBPubResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EDIESBService">
+    <wsdl:port name="EDIESBServicePort" binding="tns:EDIESBServiceSoapBinding">
+      <soap:address location="http://169.169.19.33:8888/com.nbport.ediesb.service.EDIESBService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

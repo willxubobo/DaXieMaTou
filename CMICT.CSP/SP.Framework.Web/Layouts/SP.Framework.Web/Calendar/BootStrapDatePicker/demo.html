@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bootstrap datepicker demo</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="../../JQuery/jquery-2.1.4.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script><br />
+<script type="text/javascript">
+$(function(){
+    $('#div1').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('#div2').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+		format:'dd-mm-yyyy'
+    });
+	$('#div3').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+	
+	$('#startDate1').datetimepicker({
+		weekStart: 1,
+        todayBtn:  0,
+		autoclose: 1,
+		todayHighlight: false,
+		minView:2,
+		pickerPosition:'bottom-left',
+		startDate:new Date()
+	}).on('changeDate',function(selected){
+		var startDate = new Date(selected.date.valueOf());
+    	$('#endDate1').datetimepicker('setStartDate', startDate);	
+	});
+	//$('#startDate1').datetimepicker('setStartDate', '2015-06-21');
+	//var valueEndDate=$('#endDate1').data("date")
+	//alert("end date value is :"+valueEndDate);
+	$('#endDate1').datetimepicker({
+		weekStart: 1,
+        todayBtn:  0,
+		autoclose: 1,
+		todayHighlight: 0,
+		minView:2,
+		pickerPosition:'bottom-left',
+		startDate:new Date()
+	}).on('changeDate',function(selected){
+		var endDate=new Date(selected.date.valueOf());
+		var currentDate=new Date();
+		$('#startDate1').datetimepicker('setEndDate',endDate);
+		
+
+	})
+
+	
+})
+
+function StartDateGetEnd(){
+	var endDate=$('#endDate1').data("date");
+	return endDate;
+}
+
+function EndDateGetStart(){
+	var startDate=$('#startDate1').data("date");
+	return startDate;	
+}
+
+
+
+
+</script>
+</head>
+
+<body>
+<div class="container">
+    <form action="" class="form-horizontal"  role="form">
+        <fieldset>
+            <legend>Demo</legend>
+            <div class="form-group">
+                <label for="dtp_input1" class="col-md-2 control-label">DateTime Picking</label>
+                <div id="div1" class="input-group date form_datetime col-md-5" data-date="" data-date-format="" data-link-field="dtp_input1">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+				<input type="hidden" id="dtp_input1" value="" /><br/>
+            </div>
+			<div class="form-group">
+                <label for="dtp_input2" class="col-md-2 control-label">Date Picking</label>
+                <div id="div2" class="input-group date form_date col-md-5" data-date="" data-date-format="" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+				<input type="hidden" id="dtp_input2" value="" /><br/>
+            </div>
+			<div class="form-group">
+                <label for="dtp_input3" class="col-md-2 control-label">Time Picking</label>
+                <div id="div3" class="input-group date form_time col-md-5" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                </div>
+				<input type="hidden" id="dtp_input3" value="" /><br/>
+            </div>
+            <div class="form-group">
+                 <label for="dtp_input3" class="col-md-2 control-label">Date Compare</label>
+                 <div id="startDate1" class="input-group date form_date col-md-5" data-date-format="yyyy-mm-dd" >
+                    <input class="form-control" size="16" type="text"  readonly>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                <div id="endDate1" class="input-group date form_date col-md-5"  data-date-format="yyyy-mm-dd" >
+                    <input class="form-control" size="16" type="text"  readonly>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

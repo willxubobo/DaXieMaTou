@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="445cb196-bff6-4f23-8f79-e8156cfb7826" solutionId="445cb196-bff6-4f23-8f79-e8156cfb7826" resetWebServer="false" sharePointProductVersion="15.0" name="CMICT.CSP.Web" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="CMICT.CSP.BLL.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\CMICT.CSP.BLL\CMICT.CSP.BLL.csproj" />
+    <customAssembly location="AspNetPager.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="ISAPI\AspNetPager.dll" />
+    <projectOutputAssembly location="CMICT.CSP.Model.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\CMICT.CSP.Model\CMICT.CSP.Model.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="36932695-d420-411c-8f98-628c50e9adae" />
+    <featureReference itemId="a1b11998-717a-438d-b056-2b61f60b2bc6" />
+    <featureReference itemId="390a8e38-c21b-4419-be19-fe3bf7946a23" />
+  </features>
+</package>

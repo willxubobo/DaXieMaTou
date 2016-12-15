@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- 父内容类型: 项目 (0x01) -->
+  <ContentType ID="0x01007B52EBEC5311400980D061C476720781" Name="报表细类" Group="自定义内容类型" Description="我的内容类型" Inherits="TRUE" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{E2FB74BA-8C2D-414D-B0A2-2807D3E7A999}" DisplayName="报表大类" Name="USER_LOOKUP_CODE_LINE" Required="TRUE" />
+      <FieldRef ID="{F4371807-7595-43D1-AC32-0B8E9BA26388}" DisplayName="顺序" Required="FALSE" Name="SEQUENCE" />
+      <FieldRef ID="{25C32A16-8B01-42F0-8A91-DF0A8A0AB4B5}" DisplayName="启用" Required="FALSE" Name="ENABLE" />
+    </FieldRefs>
+  </ContentType>
+</Elements>

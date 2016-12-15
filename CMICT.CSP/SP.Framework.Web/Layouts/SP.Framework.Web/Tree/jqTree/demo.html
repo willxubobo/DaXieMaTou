@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JqTree Demo</title>
+<link href="css/jqtree.css" rel="stylesheet" />
+<link href="css/documentation.css" rel="stylesheet" />
+<link href="css/example.css" rel="stylesheet" />
+
+<script type="text/javascript" src="../../JQuery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/tree.jquery.js"></script>
+
+<script>
+$(function(){
+	var data = [
+    {
+        label: 'node1', id: 1,
+        children: [
+            { label: 'child1', id: 2 },
+            { label: 'child2', id: 3 }
+        ]
+    },
+    {
+        label: 'node2', id: 4,
+        children: [
+            { label: 'child3', id: 5 }
+        ]
+    },
+	{
+        label: 'node3', id: 6,
+        children: [
+            { label: 'child4', id: 7 }
+        ]
+    }
+];
+$('#tree1').tree({
+    data: data,
+    autoOpen: true,
+    dragAndDrop: true
+});
+})
+</script>
+</head>
+
+<body>
+<div id="tree1"></div>
+</body>
+</html>

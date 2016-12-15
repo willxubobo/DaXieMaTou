@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- 请不要更改下面的 Name 特性的值。如果它与“列表”项目项的文件夹名称不匹配，则项目运行时将出错。 -->
+    <ListTemplate
+        Name="SYS_LOOKUP_TYPES"
+        Type="10003"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="410"
+        DisplayName="SYS_LOOKUP_TYPES"
+        Description="我的列表定义"
+        Image="/_layouts/15/images/itgen.png"/>
+</Elements>

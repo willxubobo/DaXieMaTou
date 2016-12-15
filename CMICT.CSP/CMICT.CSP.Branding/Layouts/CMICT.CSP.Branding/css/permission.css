@@ -1,0 +1,44 @@
+﻿/*add by louis.zhu at 2015.09.16 for permission*/
+
+.RightsContentDiv {
+    width: 580px;
+    height: 320px;
+    margin: 15px;
+    z-index:3;
+    border-radius:5px;
+}
+
+.RightsReadTB {
+    width: 570px;
+    overflow: auto;
+    min-height: 240px;
+    max-height: 240px;
+}
+
+.RightsEditTB {
+    width: 570px;
+    display: none;
+    overflow: auto;
+    min-height: 240px;
+    max-height: 240px;
+}
+
+.RightsFilterBox {
+    margin-right: 12px;
+}
+
+.cboManage {
+    margin-right: 2px;
+}
+
+.cboRead {
+    margin-left: 10px;
+    margin-right: 2px;
+}
+.divPersonalRights{
+    font-size:12px !important;
+}
+.lblPersonalPermission
+{
+    font-size:12px !important;
+}

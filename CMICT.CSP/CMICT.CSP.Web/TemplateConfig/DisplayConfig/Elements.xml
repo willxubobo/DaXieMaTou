@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="DisplayConfig" List="113" Url="_catalogs/wp">
+    <File Path="DisplayConfig\DisplayConfig.webpart" Url="CMICT.CSP.Web_DisplayConfig.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="TemplateConfig" />
+    </File>
+  </Module>
+</Elements>

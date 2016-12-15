@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field ID="{B5BADF01-860C-43EE-A27E-D0BA4B61AB57}" Name="LoginUser" DisplayName="LoginUser" Type="User" Required="FALSE" Group="Navigation">
+  </Field>
+  <Field ID="{882FF10B-2B4B-44F1-BAA2-14E6AB90481E}" Name="OU" DisplayName="OU" Type="Text" Required="FALSE" Group="Navigation">
+  </Field>
+  <Field ID="{811B3A00-2114-4BD6-A061-31CB3E8A6A0A}" Name="RedirectUrl" DisplayName="RedirectUrl" Type="URL" Required="FALSE" Group="Navigation">
+  </Field>
+</Elements>

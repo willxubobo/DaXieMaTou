@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="CMICT.CSP.Web.TemplateConfig.DataSourceConfig.DataSourceConfig, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">DataSourceConfig</property>
+        <property name="Description" type="string">模板配置向导-数据源配置</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

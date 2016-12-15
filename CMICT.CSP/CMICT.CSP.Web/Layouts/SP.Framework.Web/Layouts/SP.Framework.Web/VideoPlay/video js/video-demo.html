@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>video-Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="css/video-js.css"/>
+    <script src="../../JQuery/jquery-2.1.4.min.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/video.js"></script>
+    <script>
+	    videojs.options.flash.swf = "js/video-js.swf";
+	</script>
+</head>
+<body>
+	<div class="demoBox">
+        <p class="demoTitle">video视频播放</p>
+        <div class="videoBox">
+        	<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width    ="640" height="264"poster="http://video-js.zencoder.com/oceans-clip.png"data-setup="{}">
+			    <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+			    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+			    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+			    <track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+			    <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+			    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+			</video>
+        </div>
+	</div>
+	<script type="text/javascript">
+		//自动播放
+	    var myPlayer = videojs('example_video_1');
+	    videojs("example_video_1").ready(function(){
+	        var myPlayer = this;
+	        myPlayer.play();
+	    });
+</script>
+</body>
+</html>

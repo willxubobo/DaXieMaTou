@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://service.cmict.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://service.cmict.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://service.cmict.com/">
+      <s:element name="costcoAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="applyData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="costcoAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="costcoAddResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryCtnno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ctnno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryCtnnoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryCtnnoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ctnno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vesselcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voyage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isDataOK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isLocationOK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isCtnOK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="realSealNos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="submitCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="submitCheckResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TosSubmitCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ctnno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vesselcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="voyage" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isDataOK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isLocationOK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isCtnOK" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="realSealNos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="edicontainerInfoID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="containerrecid" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TosSubmitCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TosSubmitCheckResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TOS04">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlinput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TOS04Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TOS04Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="callNPP4EDI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="toNode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="esbID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="callNPP4EDIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="callNPP4EDIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBookTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="preDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBookTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBookTimeResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="errorMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="errorCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reserve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="containerNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bLNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reserved" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="handled" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reserveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reserveResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="errorMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="errorCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reserveContainers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="containers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reserveDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="linkman" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reserveContainersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reserveContainersResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="errorMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="errorCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="costcoOutGateSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="outDateStar" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="outDateEnds" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="costcoOutGateSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="costcoOutGateSearchResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="costcoContainerSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="containerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="businessType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="costcoContainerSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="costcoContainerSearchResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="costcoAddSoapIn">
+    <wsdl:part name="parameters" element="tns:costcoAdd" />
+  </wsdl:message>
+  <wsdl:message name="costcoAddSoapOut">
+    <wsdl:part name="parameters" element="tns:costcoAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkUserSoapIn">
+    <wsdl:part name="parameters" element="tns:checkUser" />
+  </wsdl:message>
+  <wsdl:message name="checkUserSoapOut">
+    <wsdl:part name="parameters" element="tns:checkUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryCtnnoSoapIn">
+    <wsdl:part name="parameters" element="tns:queryCtnno" />
+  </wsdl:message>
+  <wsdl:message name="queryCtnnoSoapOut">
+    <wsdl:part name="parameters" element="tns:queryCtnnoResponse" />
+  </wsdl:message>
+  <wsdl:message name="submitCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:submitCheck" />
+  </wsdl:message>
+  <wsdl:message name="submitCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:submitCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="TosSubmitCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:TosSubmitCheck" />
+  </wsdl:message>
+  <wsdl:message name="TosSubmitCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:TosSubmitCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="TOS04SoapIn">
+    <wsdl:part name="parameters" element="tns:TOS04" />
+  </wsdl:message>
+  <wsdl:message name="TOS04SoapOut">
+    <wsdl:part name="parameters" element="tns:TOS04Response" />
+  </wsdl:message>
+  <wsdl:message name="callNPP4EDISoapIn">
+    <wsdl:part name="parameters" element="tns:callNPP4EDI" />
+  </wsdl:message>
+  <wsdl:message name="callNPP4EDISoapOut">
+    <wsdl:part name="parameters" element="tns:callNPP4EDIResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBookTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:getBookTime" />
+  </wsdl:message>
+  <wsdl:message name="getBookTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:getBookTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="reserveSoapIn">
+    <wsdl:part name="parameters" element="tns:reserve" />
+  </wsdl:message>
+  <wsdl:message name="reserveSoapOut">
+    <wsdl:part name="parameters" element="tns:reserveResponse" />
+  </wsdl:message>
+  <wsdl:message name="reserveContainersSoapIn">
+    <wsdl:part name="parameters" element="tns:reserveContainers" />
+  </wsdl:message>
+  <wsdl:message name="reserveContainersSoapOut">
+    <wsdl:part name="parameters" element="tns:reserveContainersResponse" />
+  </wsdl:message>
+  <wsdl:message name="costcoOutGateSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:costcoOutGateSearch" />
+  </wsdl:message>
+  <wsdl:message name="costcoOutGateSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:costcoOutGateSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="costcoContainerSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:costcoContainerSearch" />
+  </wsdl:message>
+  <wsdl:message name="costcoContainerSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:costcoContainerSearchResponse" />
+  </wsdl:message>
+  <wsdl:portType name="QGCostcoSoap">
+    <wsdl:operation name="costcoAdd">
+      <wsdl:input message="tns:costcoAddSoapIn" />
+      <wsdl:output message="tns:costcoAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkUser">
+      <wsdl:input message="tns:checkUserSoapIn" />
+      <wsdl:output message="tns:checkUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="queryCtnno">
+      <wsdl:input message="tns:queryCtnnoSoapIn" />
+      <wsdl:output message="tns:queryCtnnoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="submitCheck">
+      <wsdl:input message="tns:submitCheckSoapIn" />
+      <wsdl:output message="tns:submitCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TosSubmitCheck">
+      <wsdl:input message="tns:TosSubmitCheckSoapIn" />
+      <wsdl:output message="tns:TosSubmitCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TOS04">
+      <wsdl:input message="tns:TOS04SoapIn" />
+      <wsdl:output message="tns:TOS04SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="callNPP4EDI">
+      <wsdl:input message="tns:callNPP4EDISoapIn" />
+      <wsdl:output message="tns:callNPP4EDISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBookTime">
+      <wsdl:input message="tns:getBookTimeSoapIn" />
+      <wsdl:output message="tns:getBookTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="reserve">
+      <wsdl:input message="tns:reserveSoapIn" />
+      <wsdl:output message="tns:reserveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="reserveContainers">
+      <wsdl:input message="tns:reserveContainersSoapIn" />
+      <wsdl:output message="tns:reserveContainersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="costcoOutGateSearch">
+      <wsdl:input message="tns:costcoOutGateSearchSoapIn" />
+      <wsdl:output message="tns:costcoOutGateSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="costcoContainerSearch">
+      <wsdl:input message="tns:costcoContainerSearchSoapIn" />
+      <wsdl:output message="tns:costcoContainerSearchSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QGCostcoSoap" type="tns:QGCostcoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="costcoAdd">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/costcoAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkUser">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/checkUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryCtnno">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/queryCtnno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitCheck">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/submitCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TosSubmitCheck">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/TosSubmitCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TOS04">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/TOS04" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callNPP4EDI">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/callNPP4EDI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBookTime">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/getBookTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserve">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/reserve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserveContainers">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/reserveContainers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="costcoOutGateSearch">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/costcoOutGateSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="costcoContainerSearch">
+      <soap:operation soapAction="http://service.cmict.com/cmictbts/costcoContainerSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QGCostcoSoap12" type="tns:QGCostcoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="costcoAdd">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/costcoAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkUser">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/checkUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryCtnno">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/queryCtnno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitCheck">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/submitCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TosSubmitCheck">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/TosSubmitCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TOS04">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/TOS04" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="callNPP4EDI">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/callNPP4EDI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBookTime">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/getBookTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserve">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/reserve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserveContainers">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/reserveContainers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="costcoOutGateSearch">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/costcoOutGateSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="costcoContainerSearch">
+      <soap12:operation soapAction="http://service.cmict.com/cmictbts/costcoContainerSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QGCostco">
+    <wsdl:port name="QGCostcoSoap" binding="tns:QGCostcoSoap">
+      <soap:address location="http://10.2.2.222:8888/CM.CTOS.WebServiceLayer.back/QGCostco.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QGCostcoSoap12" binding="tns:QGCostcoSoap12">
+      <soap12:address location="http://10.2.2.222:8888/CM.CTOS.WebServiceLayer.back/QGCostco.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:intf="http://codswitchtable.standard.platform.services.cbos.nbport.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://codswitchtable.standard.platform.services.cbos.nbport.com" targetNamespace="http://codswitchtable.standard.platform.services.cbos.nbport.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://codswitchtable.standard.platform.services.cbos.nbport.com" elementFormDefault="qualified" targetNamespace="http://codswitchtable.standard.platform.services.cbos.nbport.com">
+      <xsd:element name="getCodSwitchMessage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="userID" nillable="true" type="xsd:string" />
+            <xsd:element name="codType" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ArrayOf_xsd_string">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getCodSwitchMessageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getCodSwitchMessageReturn" type="impl:ArrayOf_xsd_string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCodSwitchMessage2">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="userID" nillable="true" type="xsd:string" />
+            <xsd:element name="codType" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="CodSwicthTable">
+        <xsd:sequence>
+          <xsd:element name="CODE_CBOS" nillable="true" type="xsd:string" />
+          <xsd:element name="CODE_NAME_C_CBOS" nillable="true" type="xsd:string" />
+          <xsd:element name="CODE_NAME_C_SWITCH" nillable="true" type="xsd:string" />
+          <xsd:element name="CODE_NAME_E_CBOS" nillable="true" type="xsd:string" />
+          <xsd:element name="CODE_NAME_E_SWITCH" nillable="true" type="xsd:string" />
+          <xsd:element name="CODE_SWITCH" nillable="true" type="xsd:string" />
+          <xsd:element name="SWITCH_TAB_NAME" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="getCodSwitchMessage2Response">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getCodSwitchMessage2Return" type="impl:CodSwicthTable" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getCodSwitchMessageResponse">
+    <wsdl:part name="parameters" element="impl:getCodSwitchMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCodSwitchMessageRequest">
+    <wsdl:part name="parameters" element="impl:getCodSwitchMessage" />
+  </wsdl:message>
+  <wsdl:message name="getCodSwitchMessage2Response">
+    <wsdl:part name="parameters" element="impl:getCodSwitchMessage2Response" />
+  </wsdl:message>
+  <wsdl:message name="getCodSwitchMessage2Request">
+    <wsdl:part name="parameters" element="impl:getCodSwitchMessage2" />
+  </wsdl:message>
+  <wsdl:portType name="CodSwicthTableService">
+    <wsdl:operation name="getCodSwitchMessage">
+      <wsdl:input name="getCodSwitchMessageRequest" message="impl:getCodSwitchMessageRequest" />
+      <wsdl:output name="getCodSwitchMessageResponse" message="impl:getCodSwitchMessageResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCodSwitchMessage2">
+      <wsdl:input name="getCodSwitchMessage2Request" message="impl:getCodSwitchMessage2Request" />
+      <wsdl:output name="getCodSwitchMessage2Response" message="impl:getCodSwitchMessage2Response" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CodSwicthTableServiceSoapBinding" type="impl:CodSwicthTableService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCodSwitchMessage">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCodSwitchMessageRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCodSwitchMessageResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCodSwitchMessage2">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCodSwitchMessage2Request">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCodSwitchMessage2Response">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CodSwicthTableServiceService">
+    <wsdl:port name="CodSwicthTableService" binding="impl:CodSwicthTableServiceSoapBinding">
+      <wsdlsoap:address location="http://cbos.nbport.com.cn:85/CBOSWeb/services/CodSwicthTableService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="BoxInfoTransfer" List="113" Url="_catalogs/wp">
+    <File Path="BoxInfoTransfer\BoxInfoTransfer.webpart" Url="CMICT.CSP.Web_BoxInfoTransfer.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="BusinessOnLine" />
+    </File>
+  </Module>
+</Elements>

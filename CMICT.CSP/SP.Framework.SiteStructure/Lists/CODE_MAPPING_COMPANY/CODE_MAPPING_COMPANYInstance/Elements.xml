@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="代码映射维护公司管理" OnQuickLaunch="FALSE" TemplateType="100" Url="Lists/CODE_MAPPING_COMPANY" Description="代码映射维护公司管理"></ListInstance>
+</Elements>

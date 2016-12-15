@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="f3d0d2c0-98ac-42a2-8999-5730c478327c" solutionId="f3d0d2c0-98ac-42a2-8999-5730c478327c" resetWebServer="false" sharePointProductVersion="15.0" name="CMICT.CSP.Async" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Newtonsoft.Json.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="DLL\Newtonsoft.Json.dll" />
+    <customAssembly location="AspNetPager.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="DLL\AspNetPager.dll" />
+    <projectOutputAssembly location="CMICT.CSP.BLL.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\CMICT.CSP.BLL\CMICT.CSP.BLL.csproj" />
+    <projectOutputAssembly location="NET.Framework.Common.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\NET.Framework.Common\NET.Framework.Common.csproj" />
+    <customAssembly location="NPOI.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="DLL\NPOI.dll" />
+    <customAssembly location="NPOI.OOXML.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="DLL\NPOI.OOXML.dll" />
+    <customAssembly location="NPOI.OpenXml4Net.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="DLL\NPOI.OpenXml4Net.dll" />
+    <customAssembly location="NPOI.OpenXmlFormats.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="DLL\NPOI.OpenXmlFormats.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="75504b2d-4290-4615-8ca3-0819b16d182e" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="af01bf20-6235-4ba1-9a51-13eb2283e642" />
+  </projectItems>
+</package>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="MainNavigation" List="113" Url="_catalogs/wp">
+    <File Path="MainNavigation\MainNavigation.webpart" Url="CMICT.CSP.Branding_MainNavigation.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="GlobalWebPart" />
+    </File>
+  </Module>
+</Elements>

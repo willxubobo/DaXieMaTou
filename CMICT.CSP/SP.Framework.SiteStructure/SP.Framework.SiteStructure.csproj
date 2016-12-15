@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9BEF492-7422-467C-A3F8-39180CC73214}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SP.Framework.SiteStructure</RootNamespace>
+    <AssemblyName>SP.Framework.SiteStructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Camlex.NET, Version=4.0.0.0, Culture=neutral, PublicKeyToken=831792d54d5285b7, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Camlex.NET.dll.4.0.0.0\lib\net20\Camlex.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.0.4.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\EPPlus.4.0.4\lib\net20\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\CMICT.SiteStructure.Lists\CMICT.SiteStructure.EventReceiver.cs">
+      <DependentUpon>CMICT.SiteStructure.Lists.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\SP.Framework.SiteStructure\SP.Framework.EventReceiver.cs">
+      <DependentUpon>SP.Framework.SiteStructure.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ContentTypes\CODE_MAPPING_ContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dbef8667-ea7f-415a-9c18-eb27bbd37a2a}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\COMPANY_Management_ContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3567b38e-1ff1-4dcc-bddb-abc49dcd9977}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\Navigation_ContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8fff5e8a-1998-492d-a5eb-13ec57c66641}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\SYS_LookupTypes_ContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{645005bb-f005-41da-b339-558c7ab839c2}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\SYS_LookupValues_ContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9b5e4ca5-28b3-48df-8636-0009bec4eb75}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\USER_LookupTypes_ContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0f8741ae-32bb-40eb-aed6-1fd6db2042ca}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentTypes\USER_LookupValues_ContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{725df9b0-6970-4a7e-aa3a-5d07917f7564}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\CMICT.SiteStructure.SiteColumns\CMICT.SiteStructure.SiteColumns.feature">
+      <FeatureId>{9eec9707-236b-497a-a806-c8ebf4574e5e}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.SiteStructure.ContentTypes\CMICT.SiteStructure.ContentTypes.feature">
+      <FeatureId>{f1fdcfa7-6c70-42a6-bc98-0baa706fbc36}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.SiteStructure.Lists\CMICT.SiteStructure.Lists.feature">
+      <FeatureId>{669b66c5-9814-4858-b745-969d714efd58}</FeatureId>
+    </None>
+    <None Include="Features\CMICT.CodeMappingSync.Lists\CMICT.CodeMappingSync.Lists.feature">
+      <FeatureId>{34e029f7-ba73-4c50-a341-ad26669daffa}</FeatureId>
+    </None>
+    <None Include="Features\SP.Framework.SiteStructure\SP.Framework.SiteStructure.feature">
+      <FeatureId>{baa04136-4485-487a-934d-f8e33d1140b2}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0e66699d-57a3-479b-b728-182ef47d0ba3}</SharePointProjectItemId>
+    </None>
+    <None Include="Layouts\SP.Framework.SiteStructure\SPList_Init.xlsx" />
+    <None Include="Lists\CODE_MAPPING_COMPANY\CODE_MAPPING_COMPANYInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{79882571-aa53-4b83-893d-bbfbc4aeb3d0}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\CODE_MAPPING_COMPANY\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d2000764-3fc4-4c78-9fcf-0f731bde8573}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\CODE_MAPPING_SYNC\CODE_MAPPING_SYNCInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f53aff21-f6c0-45cc-b6c5-497cd8ea7a24}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\CODE_MAPPING_SYNC\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a3baddfc-b20f-4556-a68d-b5daeca966d6}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\NAVIGATION_MANAGEMENT\NAVIGATION_MANAGEMENTInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{642990b6-d7b5-46f5-8dc8-d1fe68f319d1}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\NAVIGATION_MANAGEMENT\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bafe327a-06ad-4d7f-9e9c-d6bb16bf2633}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\SYS_LOOKUP_TYPES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5d84a721-d2f7-4fc9-aea8-8b266d8f495e}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\SYS_LOOKUP_TYPES\SYS_LOOKUP_TYPESInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c873ecb9-8368-491b-802f-7bdc6f7d875d}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\SYS_LOOKUP_VALUES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c23aa714-face-4cad-8162-570472768838}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\SYS_LOOKUP_VALUES\SYS_LOOKUP_VALUESInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a2613047-8462-496e-a8b0-364524d7886d}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\USER_LOOKUP_TYPES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1f5672af-598f-4fa7-8929-70b71c620073}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\USER_LOOKUP_TYPES\USER_LOOKUP_TYPESInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{90abb1bd-05ef-4e02-b427-dadfbfb222f4}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\USER_LOOKUP_VALUES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a6ffffe1-5d8c-4c01-9225-414558fbca2f}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\USER_LOOKUP_VALUES\USER_LOOKUP_VALUESInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5a1a8556-5df5-4abc-a19f-7ab4c6b274b0}</SharePointProjectItemId>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Package\Package.package">
+      <PackageId>{6b68e042-dc37-4d41-963e-afba47ad6a4f}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="SiteColumns\Navigation_SiteColumns\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{de21da0e-16b8-4324-87f8-a2299e51e80c}</SharePointProjectItemId>
+    </None>
+    <None Include="SiteColumns\SYS_SiteColumns\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a4159004-257f-412f-800c-20766aaffc8d}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NET.Framework.Common\NET.Framework.Common.csproj">
+      <Project>{9ee64ba8-7b5f-42b2-b551-370945f8b261}</Project>
+      <Name>NET.Framework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Framework.Common\SP.Framework.Common.csproj">
+      <Project>{bf5b2831-908a-474f-acaf-f85ae6311720}</Project>
+      <Name>SP.Framework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SP.Framework.DAL\SP.Framework.DAL.csproj">
+      <Project>{31d049eb-ad99-44bb-a63d-aa40f2d15c03}</Project>
+      <Name>SP.Framework.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContentTypes\CODE_MAPPING_ContentType\Elements.xml" />
+    <Content Include="ContentTypes\COMPANY_Management_ContentType\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ContentTypes\Navigation_ContentType\Elements.xml" />
+    <Content Include="ContentTypes\SYS_LookupTypes_ContentType\Elements.xml" />
+    <Content Include="ContentTypes\SYS_LookupValues_ContentType\Elements.xml" />
+    <Content Include="ContentTypes\USER_LookupTypes_ContentType\Elements.xml" />
+    <Content Include="ContentTypes\USER_LookupValues_ContentType\Elements.xml" />
+    <Content Include="Features\CMICT.SiteStructure.SiteColumns\CMICT.SiteStructure.SiteColumns.Template.xml">
+      <DependentUpon>CMICT.SiteStructure.SiteColumns.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.SiteStructure.ContentTypes\CMICT.SiteStructure.ContentTypes.Template.xml">
+      <DependentUpon>CMICT.SiteStructure.ContentTypes.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.SiteStructure.Lists\CMICT.SiteStructure.Lists.Template.xml">
+      <DependentUpon>CMICT.SiteStructure.Lists.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\CMICT.CodeMappingSync.Lists\CMICT.CodeMappingSync.Lists.Template.xml">
+      <DependentUpon>CMICT.CodeMappingSync.Lists.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SP.Framework.SiteStructure\SP.Framework.SiteStructure.Template.xml">
+      <DependentUpon>SP.Framework.SiteStructure.feature</DependentUpon>
+    </Content>
+    <Content Include="ISAPI\Camlex.NET.dll" />
+    <Content Include="ISAPI\Enyim.Caching.dll" />
+    <Content Include="ISAPI\EPPlus.dll" />
+    <Content Include="ISAPI\log4net.dll" />
+    <Content Include="ISAPI\Newtonsoft.Json.dll" />
+    <Content Include="ISAPI\NPOI.dll" />
+    <Content Include="Lists\CODE_MAPPING_COMPANY\CODE_MAPPING_COMPANYInstance\Elements.xml" />
+    <Content Include="Lists\CODE_MAPPING_COMPANY\Elements.xml" />
+    <Content Include="Lists\CODE_MAPPING_COMPANY\Schema.xml" />
+    <Content Include="Lists\CODE_MAPPING_SYNC\CODE_MAPPING_SYNCInstance\Elements.xml" />
+    <Content Include="Lists\CODE_MAPPING_SYNC\Elements.xml" />
+    <Content Include="Lists\CODE_MAPPING_SYNC\Schema.xml" />
+    <Content Include="Lists\NAVIGATION_MANAGEMENT\Elements.xml" />
+    <Content Include="Lists\NAVIGATION_MANAGEMENT\NAVIGATION_MANAGEMENTInstance\Elements.xml" />
+    <Content Include="Lists\NAVIGATION_MANAGEMENT\Schema.xml" />
+    <Content Include="Lists\SYS_LOOKUP_TYPES\Elements.xml" />
+    <Content Include="Lists\SYS_LOOKUP_TYPES\Schema.xml" />
+    <Content Include="Lists\SYS_LOOKUP_TYPES\SYS_LOOKUP_TYPESInstance\Elements.xml" />
+    <Content Include="Lists\SYS_LOOKUP_VALUES\Elements.xml" />
+    <Content Include="Lists\SYS_LOOKUP_VALUES\Schema.xml" />
+    <Content Include="Lists\SYS_LOOKUP_VALUES\SYS_LOOKUP_VALUESInstance\Elements.xml" />
+    <Content Include="Lists\USER_LOOKUP_TYPES\Elements.xml" />
+    <Content Include="Lists\USER_LOOKUP_TYPES\Schema.xml" />
+    <Content Include="Lists\USER_LOOKUP_TYPES\USER_LOOKUP_TYPESInstance\Elements.xml" />
+    <Content Include="Lists\USER_LOOKUP_VALUES\Elements.xml" />
+    <Content Include="Lists\USER_LOOKUP_VALUES\Schema.xml" />
+    <Content Include="Lists\USER_LOOKUP_VALUES\USER_LOOKUP_VALUESInstance\Elements.xml" />
+    <Content Include="SiteColumns\Navigation_SiteColumns\Elements.xml" />
+    <Content Include="SiteColumns\SYS_SiteColumns\Elements.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>

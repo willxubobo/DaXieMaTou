@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SuperSlide-Demo</title>
+    <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="css/SuperSlide-layout.css"/>
+    <script src="../../JQuery/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>    
+   <!--[if lte IE 8]>
+	    <script src="../../JQuery/jquery-1.9.1.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="demoBox">
+        <p class="demoTitle">焦点图轮播</p>
+		<div class="focusPictures">
+            <!-- 焦点图 Start -->
+			<div id="slideBox" class="slideBox">
+				<div class="hd">
+					<ul><li></li><li></li><li></li></ul>
+				</div>
+				<div class="bd">
+					<ul>
+						<li><a href="javascript:;" target="_blank"><img src="images/pic1.jpg" /></a></li>
+						<li><a href="javascript:;" target="_blank"><img src="images/pic2.jpg" /></a></li>
+						<li><a href="javascript:;" target="_blank"><img src="images/pic3.jpg" /></a></li>
+					</ul>
+				</div>
+
+				<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+				<a class="prev" href="javascript:void(0)"></a>
+				<a class="next" href="javascript:void(0)"></a>
+
+			</div>
+            <!-- 焦点图 End -->
+            <!-- 焦点图控制参数 Start -->
+            <script type="text/javascript">
+	            jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,delayTime:1000,trigger:"click"});
+            </script>
+            <!-- 焦点图控制参数 End -->
+		</div>
+
+
+		 <p class="demoTitle">图片滚动-左</p>
+		 <div class="picMarquee">
+
+            <!-- 图片滚动  Start -->
+		 	<div class="picScroll-left">
+				<div class="hd">
+					<a class="next" href="javascript:;"></a>
+					<ul></ul>
+					<a class="prev" href="javascript:;"></a>
+					<!-- <span class="pageState"></span> -->
+				</div>
+				<div class="bd">
+					<ul class="picList">
+						<li>
+							<div class="pic">
+								<a href="javascript:;" target="_blank">
+									<img src="images/pic1.jpg" />
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="javascript:;" target="_blank">
+									<img src="images/pic1.jpg" />
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="javascript:;" target="_blank">
+									<img src="images/pic1.jpg" />
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="javascript:;" target="_blank">
+									<img src="images/pic1.jpg" />
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="javascript:;" target="_blank">
+									<img src="images/pic1.jpg" />
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="javascript:;" target="_blank">
+									<img src="images/pic1.jpg" />
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 图片滚动  End -->
+
+			 <!-- 图片滚动控制参数 Start -->
+            <script type="text/javascript">
+	            jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:3,pnLoop:false});
+            </script>
+            <!-- 图片滚动控制参数 End -->
+		 </div>
+
+
+		 <p class="demoTitle">文字无缝滚动-左</p>
+		 <div class="txtMarquee">
+		 	<div class="txtMarquee-left">
+				<div class="hd">
+					<a class="next"></a>
+					<a class="prev"></a>
+				</div>
+				<div class="bd">
+					<ul class="infoList">
+						<li><a href="javascript:;" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+						<li><a href="javascript:;" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+						<li><a href="javascript:;" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+						<li><a href="javascript:;" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+						<li><a href="javascript:;" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+						<li><a href="javascript:;" target="_blank">中国打破了世界软件巨头规则</a><span>[11-11]</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+	            jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",interTime:50,vis:2,trigger:"click"});
+            </script>
+		 </div>
+
+	</div>
+</body>
+</html>

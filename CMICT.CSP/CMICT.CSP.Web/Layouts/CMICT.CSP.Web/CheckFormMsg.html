@@ -1,0 +1,48 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript">
+
+
+
+	function GetMsg(){
+	    var par = window.parent;
+	    var MsgDiv = document.getElementById("Msg");
+	    var MsgArray = par.ReturnErrors();
+	    var sinfo = "<ol>";
+	    //MsgDiv.innerHTML = "<ol>";
+	    if (typeof (par.CheckNameOnly) == "function") {
+	        var rv = par.CheckNameOnly();
+	        if (rv != null && rv != undefined && rv != "") {
+	            var tlist = rv.split('|');
+	            sinfo += "<li>" + tlist[1] + "</li>";
+	            //MsgDiv.innerHTML = MsgDiv.innerHTML + "<li>" + tlist[1] + "</li>";
+	            par.errorMsg(tlist[0], tlist[1]);
+	        }
+	    }
+	    for(var i =0;i < MsgArray.length;i++)
+	    {
+	        var msInfo = MsgArray[i];
+	        par.errorMsg(msInfo[0], msInfo[1]);
+	        sinfo += "<li>" + msInfo[1] + "</li>";
+	        //MsgDiv.innerHTML = MsgDiv.innerHTML + "<li>" + msInfo[1] + "</li>";
+	    }
+	    sinfo += "</ol>";
+	    MsgDiv.innerHTML = sinfo;
+	    }
+    </script>
+
+
+
+</head>
+<body>
+    <div id="Msg" style="font-size:12px;font-family:Microsoft YaHei,微软雅黑;">
+
+
+
+
+    </div>
+    <script type="text/javascript">GetMsg();</script>
+</body>
+</html>

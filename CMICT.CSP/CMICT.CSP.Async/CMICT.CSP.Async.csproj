@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B203BBF-A459-4F83-A382-AF54055A3392}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMICT.CSP.Async</RootNamespace>
+    <AssemblyName>CMICT.CSP.Async</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.4.5.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>DLL\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>DLL\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>DLL\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commons\CntrInfo.cs" />
+    <Compile Include="Commons\Common.cs" />
+    <Compile Include="Commons\NPOIHelper.cs" />
+    <Compile Include="Commons\SqlHelper.cs" />
+    <Compile Include="Layouts\CMICT.CSP.Async\ApplicationPageHandler.aspx.cs">
+      <DependentUpon>ApplicationPageHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\CMICT.CSP.Async\ApplicationPageHandler.aspx.designer.cs">
+      <DependentUpon>ApplicationPageHandler.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\GlobalRequestEntity.cs" />
+    <Compile Include="Module\GlobalResultEntity.cs" />
+    <Compile Include="Module\RegisterResultsEntity.cs" />
+    <Compile Include="Module\RegisterServiceEntity.cs" />
+    <Compile Include="Module\ResultEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\WebJavaReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\CIQchouxiang\CIQchouxiang.ascx.cs">
+      <DependentUpon>CIQchouxiang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\CIQchouxiang\CIQchouxiang.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CIQchouxiang.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\DangerCTNReport\DangerCTNReport.ascx.cs">
+      <DependentUpon>DangerCTNReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\DangerCTNReport\DangerCTNReport.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DangerCTNReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\DangerPicManage\DangerPicManage.ascx.cs">
+      <DependentUpon>DangerPicManage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\DangerPicManage\DangerPicManage.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DangerPicManage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\GlobalsSynchronize\GlobalData\GlobalData.ascx.cs">
+      <DependentUpon>GlobalData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\GlobalsSynchronize\GlobalData\GlobalData.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RegisterModule\RegisterAdd\RegisterAdd.ascx.cs">
+      <DependentUpon>RegisterAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RegisterModule\RegisterAdd\RegisterAdd.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterAdd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RegisterModule\RegistServiceList\RegistServiceList.ascx.cs">
+      <DependentUpon>RegistServiceList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebParts\RegisterModule\RegistServiceList\RegistServiceList.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistServiceList.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{75504b2d-4290-4615-8ca3-0819b16d182e}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{af01bf20-6235-4ba1-9a51-13eb2283e642}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{f3d0d2c0-98ac-42a2-8999-5730c478327c}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Web References\WebJavaReference\EDIESBService.wsdl" />
+    <None Include="Web References\WebJavaReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="WebParts\CIQchouxiang\CIQchouxiang.webpart" />
+    <None Include="WebParts\CIQchouxiang\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6b041a90-a4f0-4926-806c-49f595ffc8cb}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\DangerCTNReport\DangerCTNReport.webpart" />
+    <None Include="WebParts\DangerCTNReport\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{404d13b9-1d5d-4857-8271-b50520579a27}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\DangerPicManage\DangerPicManage.webpart" />
+    <None Include="WebParts\DangerPicManage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6de91c61-61d9-4ccc-90f0-012b17f643f0}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\GlobalsSynchronize\GlobalData\GlobalData.webpart" />
+    <None Include="WebParts\GlobalsSynchronize\GlobalData\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8c9a2cea-64f7-4f8f-ab55-57ef16a72a7a}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\RegisterModule\RegisterAdd\RegisterAdd.webpart" />
+    <None Include="WebParts\RegisterModule\RegisterAdd\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{96bdc111-a8bf-4c7b-a886-15a4de210b59}</SharePointProjectItemId>
+    </None>
+    <None Include="WebParts\RegisterModule\RegistServiceList\RegistServiceList.webpart" />
+    <None Include="WebParts\RegisterModule\RegistServiceList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e69e1cd9-1dcb-446e-ab6c-f1f05c0dcab5}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DLL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\CMICT.CSP.Async\ApplicationPageHandler.aspx" />
+    <Content Include="WebParts\CIQchouxiang\CIQchouxiang.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>CIQchouxiang.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\CIQchouxiang\Elements.xml" />
+    <Content Include="WebParts\DangerCTNReport\DangerCTNReport.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>DangerCTNReport.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\DangerCTNReport\Elements.xml" />
+    <Content Include="WebParts\DangerPicManage\DangerPicManage.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>DangerPicManage.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\DangerPicManage\Elements.xml" />
+    <Content Include="WebParts\GlobalsSynchronize\GlobalData\Elements.xml" />
+    <Content Include="WebParts\GlobalsSynchronize\GlobalData\GlobalData.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>GlobalData.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\RegisterModule\RegisterAdd\Elements.xml" />
+    <Content Include="WebParts\RegisterModule\RegisterAdd\RegisterAdd.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>RegisterAdd.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="WebParts\RegisterModule\RegistServiceList\Elements.xml" />
+    <Content Include="WebParts\RegisterModule\RegistServiceList\RegistServiceList.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>RegistServiceList.ascx.g.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://169.169.19.33:8888/com.nbport.ediesb.service.EDIESBService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebJavaReference\</RelPath>
+      <UpdateFromURL>http://169.169.19.33:8888/com.nbport.ediesb.service.EDIESBService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMICT.CSP.BLL\CMICT.CSP.BLL.csproj">
+      <Project>{25a5825c-030e-4adc-bf6c-92cecf165286}</Project>
+      <Name>CMICT.CSP.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NET.Framework.Common\NET.Framework.Common.csproj">
+      <Project>{9ee64ba8-7b5f-42b2-b551-370945f8b261}</Project>
+      <Name>NET.Framework.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

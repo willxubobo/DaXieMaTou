@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="SitePages\" Type="ElementManifest" />
+    <ProjectItemFile Source="TemplateManagement\CommunicationConfig.aspx" Target="SitePages\TemplateManagement\" Type="ElementFile" />
+    <ProjectItemFile Source="TemplateManagement\ConnectionConfig.aspx" Target="SitePages\TemplateManagement\" Type="ElementFile" />
+    <ProjectItemFile Source="TemplateManagement\DataSourceConfig.aspx" Target="SitePages\TemplateManagement\" Type="ElementFile" />
+    <ProjectItemFile Source="TemplateManagement\DataSourceManage.aspx" Target="SitePages\TemplateManagement\" Type="ElementFile" />
+    <ProjectItemFile Source="TemplateManagement\DisplayConfig.aspx" Target="SitePages\TemplateManagement\" Type="ElementFile" />
+    <ProjectItemFile Source="TemplateManagement\QueryConfig.aspx" Target="SitePages\TemplateManagement\" Type="ElementFile" />
+    <ProjectItemFile Source="TemplateManagement\TemplateInfoConfig.aspx" Target="SitePages\TemplateManagement\" Type="ElementFile" />
+    <ProjectItemFile Source="TemplateManagement\TemplateManagement.aspx" Target="SitePages\TemplateManagement\" Type="ElementFile" />
+    <ProjectItemFile Source="SysManagement\CodeMappingManagement.aspx" Target="SitePages\SysManagement\" Type="ElementFile" />
+    <ProjectItemFile Source="SysManagement\AuthorizationManagement.aspx" Target="SitePages\SysManagement\" Type="ElementFile" />
+    <ProjectItemFile Source="TemplateManagement\Preview.aspx" Target="SitePages\TemplateManagement\" Type="ElementFile" />
+  </Files>
+</ProjectItem>
